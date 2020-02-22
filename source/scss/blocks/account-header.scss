@@ -1,0 +1,72 @@
+.account-header {
+  background: transparent linear-gradient(180deg, #E7ECEC 0%, #E3EAEA 100%) 0% 0% no-repeat padding-box;
+
+  //background-image: url("../img/midea.png");
+}
+
+.account-header__container {
+  margin: 0 auto;
+  max-width: 1470px;
+  padding: 92px 30px 30px;
+
+  background-image: url("../img/midea.png");
+  background-repeat: no-repeat;
+  background-position: right 30px top 0;
+
+  @include retina {
+    background-image: url("../img/midea@2x.png");
+    background-size: 690px 320px;
+  }
+}
+
+.account-header__greeting {
+  display: block;
+  margin-bottom: 16px;
+
+  font-weight: 300;
+  font-size: 47px;
+  line-height: 51px;
+}
+
+.account-header__description {
+  margin: 0;
+  margin-bottom: 126px;
+  width: 570px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.account-header__nav-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.account-header__nav-item {
+  margin-right: 50px;
+  margin-bottom: 9px;
+
+  font-size: 19px;
+  line-height: 21px;
+
+  color: #888888;
+  opacity: 0.8;
+
+  transition: all 0.2s ease;
+
+  &--active {
+    color: #00adef;
+    opacity: 1;
+  }
+
+  &:hover {
+    color: #00adef;
+  }
+}
+
+.account-header__nav-item a {
+  @include link-reset;
+}

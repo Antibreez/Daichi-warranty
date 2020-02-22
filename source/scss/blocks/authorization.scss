@@ -1,0 +1,121 @@
+.authorization {
+  position: relative;
+
+  display: flex;
+  margin: 0 auto;
+  margin-top: 87px;
+  width: 1170px;
+
+  font-size: 0;
+
+  background-color: #f6f6f6;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 1px;
+    height: 360px;
+    margin-top: -180px;
+
+    background-color: #dddddd;
+  }
+}
+
+.authorization__form {
+  width: 50%;
+  padding: 62px 120px 70px;
+}
+
+.authorization__form-title,
+.authorization__registration-title {
+  margin: 0;
+  margin-bottom: 42px;
+
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 34px;
+}
+
+.authorization__form label {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+
+  &[for="password"] {
+    margin-right: 172px;
+  }
+}
+
+.authorization__forgot-password {
+  @include link-reset;
+
+  display: inline-block;
+  padding-bottom: 4px;
+
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  color: #888888;
+  text-align: right;
+
+  border-bottom: 1px solid transparent;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: #bbbbbb;
+  }
+}
+
+.authorization__form input {
+  width: 330px;
+  height: 48px;
+  padding: 0 15px;
+
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+
+  font-size: 19px;
+  line-height: 25px;
+
+  transition: all 0.3s ease;
+
+  &[name="name"] {
+    margin-bottom: 18px;
+  }
+
+  &[name="password"] {
+    margin-bottom: 42px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #00adef;
+    outline: none;
+  }
+}
+
+.authorization__button {
+  width: 330px;
+}
+
+.authorization__registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.authorization__registration-link {
+  @include link-reset;
+
+  width: 360px;
+}

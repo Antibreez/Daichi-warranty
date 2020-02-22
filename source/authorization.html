@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/GothamPro.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/GothamPro-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <section class="authorization">
+    <h1 class="visually-hidden">Авторизация или регистрация</h1>
+    <form class="authorization__form">
+      <h2 class="authorization__form-title">Войти в систему</h2>
+      <label for="name">Логин</label>
+      <input id="name" type="text" name="name" required>
+      <label for="password">Пароль</label>
+      <a class="authorization__forgot-password" href="#">Забыли пароль?</a>
+      <input id="password" type="password" name="password" required>
+      <button class="authorization__button button" type="submit">Войти</button>
+    </form>
+    <div class="authorization__registration">
+      <h2 class="authorization__registration-title">Нет логина и пароля?</h2>
+      <a class="authorization__registration-link  button  button--white" href="#"><span>Отправить заявку на регистрацию</span></a>
+    </div>
+  </section>
+  <!--<script src="js/vendor.min.js"></script>-->
+  <script src="js/script.min.js"></script>
+</body>
+</html>
