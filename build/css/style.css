@@ -836,7 +836,7 @@ img {
 
 .account-header__container {
   margin: 0 auto;
-  max-width: 1470px;
+  width: 1470px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 92px;
@@ -904,7 +904,7 @@ img {
 
 .my-products__container {
   margin: 0 auto;
-  max-width: 1470px;
+  width: 1470px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 100px;
@@ -1075,7 +1075,7 @@ img {
 
 .not-used-products__container {
   margin: 0 auto;
-  max-width: 1470px;
+  width: 1470px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 5px;
@@ -1100,7 +1100,7 @@ img {
 
 .device-registration__container {
   margin: 0 auto;
-  max-width: 1470px;
+  width: 1470px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 33px;
