@@ -100,6 +100,10 @@
     border-color: #00adef;
     outline: none;
   }
+
+  &.js--wrong-input {
+    border-color: #ff0000;
+  }
 }
 
 .authorization__button {

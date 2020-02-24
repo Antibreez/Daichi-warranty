@@ -23,7 +23,7 @@
               <a>Мои товары</a>
             </li>
             <li class="account-header__nav-item">
-              <a href="#">Зарегистрировать устройство</a>
+              <a href="device-registration.html">Зарегистрировать устройство</a>
             </li>
             <li class="account-header__nav-item">
               <a href="#">Daichi облако</a>
@@ -42,17 +42,63 @@
       <div class="my-products__container">
         <h2 class="my-products__title">Мои товары</h2>
         <ul class="my-products__list">
-          <li class="my-products__item">
-
+          <li class="my-products__item  product-card">
+            <div class="product-card__image-container">
+              <picture>
+                <source type="image/webp" srcset="img/FTXS20KRXS20L3.webp 1x, img/FTXS20KRXS20L3@2x.webp 2x">
+                <img class="product-card__image" src="img/FTXS20KRXS20L3.jpg" srcset="img/FTXS20KRXS20L3@2x.jpg 2x" alt="FTXS20K/RXS20L3">
+              </picture>
+            </div>
+            <p class="product-card__name-title">Бытовая сплит-система</p>
+            <p class="product-card__name">Daikin FTXS20K/RXS20L3</p>
+            <p class="product-card__serial-number-title">Серийный номер</p>
+            <p class="product-card__serial-number">ABCD1234GHYUDlLSC</p>
+            <p class="product-card__registration-date-title">Дата регистрации</p>
+            <p class="product-card__registration-date">18.02.2019</p>
+            <p class="product-card__end-of-warranty-title">Дата окончания гарантии</p>
+            <p class="product-card__end-of-warranty">20.03.2025</p>
+            <a class="product-card__delete-link  button  button--white" href="#">Больше не использую</a>
           </li>
           <li class="my-products__add">
-            <a></a>
+            <a class="my-products__add-link" href="device-registration.html">Зарегистрировать новое устройство</a>
           </li>
         </ul>
       </div>
     </section>
+    <section class="not-used-products">
+      <header class="not-used-products__header">
+        <button class="not-used-products__button">
+          <span class="not-used-products__show  shown">Показать неиспользуемые устройства</span>
+          <span class="not-used-products__hide  hidden">Скрыть неиспользуемые устройства</span>
+        </button>
+      </header>
+      <div class="not-used-products__content">
+        <div class="not-used-products__container">
+          <ul class="not-used-products__list">
+            <li class="not-used-products__item  product-card">
+              <div class="product-card__image-container">
+                <picture>
+                  <source type="image/webp" srcset="img/FTXS20KRXS20L3.webp 1x, img/FTXS20KRXS20L3@2x.webp 2x">
+                  <img class="product-card__image" src="img/FTXS20KRXS20L3.jpg" srcset="img/FTXS20KRXS20L3@2x.jpg 2x" alt="FTXS20K/RXS20L3">
+                </picture>
+              </div>
+              <p class="product-card__name-title">Бытовая сплит-система</p>
+              <p class="product-card__name">Daikin FTXS20K/RXS20L3</p>
+              <p class="product-card__serial-number-title">Серийный номер</p>
+              <p class="product-card__serial-number">ABCD1234GHYUDlLSC</p>
+              <p class="product-card__registration-date-title">Дата регистрации</p>
+              <p class="product-card__registration-date">18.02.2019</p>
+              <p class="product-card__end-of-warranty-title">Дата окончания гарантии</p>
+              <p class="product-card__end-of-warranty">20.03.2025</p>
+              <p class="product-card__end-of-usage-title">Использование прекращено</p>
+              <p class="product-card__end-of-usage">13.06.2019</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
-  <!--<script src="js/vendor.min.js"></script>-->
+  <script src="js/vendor.min.js"></script>
   <script src="js/script.min.js"></script>
 </body>
 </html>

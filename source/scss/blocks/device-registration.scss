@@ -1,0 +1,147 @@
+.device-registration__container {
+  @include container;
+  //margin: 0 auto;
+  //max-width: 1470px;
+  //padding-left: 30px;
+  //padding-right: 30px;
+  padding-top: 33px;
+  padding-bottom: 110px;
+}
+
+.breadcrumbs {
+  margin-bottom: 80px;
+
+  font-size: 0;
+}
+
+.breadcrumbs__link {
+  @include link-reset;
+
+  position: relative;
+
+  font-size: 15px;
+  line-height: 16px;
+
+  color: #888888;
+
+  &--active {
+    color: #00adef;
+  }
+
+  &:not(:last-child) {
+    margin-right: 28px;
+  }
+
+  &:not(:last-child)::before {
+    content: "/";
+
+    position: absolute;
+    top: 0;
+    right: -18px;
+  }
+
+  &:hover {
+    color: #00adef;
+  }
+}
+
+.device-registration__navigation {
+  display: flex;
+  width: 100%;
+
+  margin-bottom: 80px;
+}
+
+.device-registration__navigation-item {
+  position: relative;
+
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  // &:first-child::before,
+  // &:nth-child(2)::before {
+  //   content: "";
+
+  //   position: absolute;
+  //   top: 22px;
+  //   left: 50%;
+
+  //   width: 50%;
+  //   height: 1px;
+  //   margin-left: 35px;
+
+  //   background-color: #dddddd;
+  // }
+
+  // &:nth-child(2)::after,
+  // &:last-child::before {
+  //   content: "";
+
+  //   position: absolute;
+  //   top: 22px;
+  //   right: 50%;
+
+  //   width: 50%;
+  //   height: 1px;
+  //   margin-right: 35px;
+
+  //   background-color: #dddddd;
+  // }
+
+  &:nth-child(2)::before,
+  &:last-child::before {
+    content: "";
+
+    position: absolute;
+    top: 22px;
+    right: 50%;
+
+    width: calc(100% - 40px);
+    height: 1px;
+    margin-right: 35px;
+
+    background-color: #dddddd;
+  }
+
+  &.active .device-registration__navigation-number {
+    background-color: #00adef;
+  }
+
+  &.active .device-registration__navigation-name {
+    color: #000000;
+  }
+
+  &.active::before {
+    background-color: #00adef;
+  }
+}
+
+.device-registration__navigation-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 30px;
+
+  font-size: 21px;
+  line-height: 23px;
+  color: #ffffff;
+
+  background-color: #dddddd;
+  border-radius: 50%;
+}
+
+.device-registration__navigation-name {
+  margin: 0;
+
+  font-size: 19px;
+  line-height: 21px;
+  color: #888888;
+}

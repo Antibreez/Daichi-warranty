@@ -1,5 +1,6 @@
 // vendor
 @import "vendor/normalize.scss";
+@import "vendor/pikaday.scss";
 
 // general
 @import "general/variables.scss";
@@ -8,7 +9,11 @@
 @import "general/global.scss";
 
 // blocks
+@import "blocks/product-card.scss";
 @import "blocks/button.scss";
 @import "blocks/authorization.scss";
 @import "blocks/account-header.scss";
 @import "blocks/my-products.scss";
+@import "blocks/not-used-products.scss";
+@import "blocks/device-registration.scss";
+@import "blocks/device-data.scss";

@@ -1,0 +1,60 @@
+.product-card {
+  width: 330px;
+  padding: 30px 24px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+}
+
+.product-card__image-container {
+  margin-bottom: 38px;
+
+  display: inline-block;
+  width: 275px;
+  height: 206px;
+}
+
+.product-card p {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.product-card .product-card__name {
+  margin-bottom: 26px;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.product-card .product-card__name-title {
+  margin-bottom: 13px;
+}
+
+.product-card .product-card__serial-number-title,
+.product-card .product-card__registration-date-title,
+.product-card .product-card__end-of-warranty-title,
+.product-card .product-card__end-of-usage-title {
+  margin-bottom: 7px;
+
+  color: #888888;
+}
+
+.product-card .product-card__serial-number,
+.product-card .product-card__registration-date {
+  margin-bottom: 13px;
+}
+
+.product-card .product-card__end-of-warranty {
+  margin-bottom: 26px;
+}
+
+.product-card__delete-link {
+  @include link-reset;
+}

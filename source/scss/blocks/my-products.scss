@@ -1,5 +1,153 @@
 .my-products__container {
-  margin: 0 auto;
-  max-width: 1470px;
-  padding: 92px 30px 30px;
+  @include container;
+  //margin: 0 auto;
+  //max-width: 1470px;
+  //padding: 100px 30px 30px;
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.my-products__title {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 300;
+  font-size: 47px;
+  line-height: 51px;
+
+  text-align: center;
+}
+
+.my-products__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my-products__list li {
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.my-products__item {
+  //width: 330px;
+  min-height: 594px;
+  //padding: 30px 24px;
+
+  //text-align: center;
+
+  //border: 1px solid #cbcbcb;
+  //border-radius: 6px;
+}
+
+// .my-products__image-container {
+//   margin-bottom: 38px;
+
+//   display: inline-block;
+//   width: 275px;
+//   height: 206px;
+// }
+
+// .my-products__item p {
+//   margin: 0;
+
+//   font-weight: 300;
+//   font-size: 15px;
+//   line-height: 16px;
+// }
+
+// .my-products__item .my-products__name {
+//   margin-bottom: 26px;
+
+//   font-weight: 400;
+//   font-size: 17px;
+//   line-height: 18px;
+// }
+
+// .my-products__item .my-products__name-title {
+//   margin-bottom: 13px;
+// }
+
+// .my-products__item .my-products__serial-number-title,
+// .my-products__item .my-products__registration-date-title,
+// .my-products__item .my-products__end-of-warranty-title {
+//   margin-bottom: 7px;
+
+//   color: #888888;
+// }
+
+// .my-products__item .my-products__serial-number,
+// .my-products__item .my-products__registration-date {
+//   margin-bottom: 13px;
+// }
+
+// .my-products__item .my-products__end-of-warranty {
+//   margin-bottom: 26px;
+// }
+
+// .my-products__delete-link {
+//   @include link-reset;
+// }
+
+.my-products__add-link {
+  @include link-reset;
+
+  position: relative;
+
+  display: block;
+  width: 330px;
+  min-height: 594px;
+  padding: 327px 80px 20px;
+
+  font-size: 17px;
+  line-height: 21px;
+  color: #888888;
+  text-align: center;
+
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+
+  transition: all 0.2s ease;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+
+    background-color: #888888;
+  }
+
+  &::before {
+    top: 241px;
+
+    width: 4px;
+    height: 50px;
+    margin-left: -2px;
+  }
+
+  &::after {
+    top:264px;
+
+    width: 50px;
+    height: 4px;
+    margin-left: -25px;
+  }
+
+  &:hover {
+    color: #00adef;
+    border-color: #00adef;
+    background-color: rgba(0, 173, 239, 0.1);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: #00adef;
+  }
 }

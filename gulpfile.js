@@ -110,7 +110,9 @@ gulp.task(`js-vendor`, function () {
 
 gulp.task(`js`, function () {
   return gulp.src([
-    `source/js/modules/*.js`,
+    `source/js/modules/authorization.js`,
+    `source/js/modules/account.js`,
+    `source/js/modules/device-data.js`,
   ])
     .pipe(plumber())
     .pipe(sourcemap.init())

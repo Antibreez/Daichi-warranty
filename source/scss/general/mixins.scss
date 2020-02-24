@@ -9,7 +9,6 @@
 @mixin link-reset {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 }
 
 // ШРИФТЫ
@@ -29,4 +28,12 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
   }
+}
+
+// КОНТЕЙНЕР
+@mixin container {
+  margin: 0 auto;
+  max-width: 1470px;
+  padding-left: 30px;
+  padding-right: 30px;
 }

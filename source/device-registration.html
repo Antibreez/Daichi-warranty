@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/GothamPro.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/GothamPro-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <main class="device-registration">
+    <div class="device-registration__container">
+      <div class="breadcrumbs">
+        <a class="breadcrumbs__link" href="#">Главная</a>
+        <a class="breadcrumbs__link" href="account.html">Личный кабинет</a>
+        <a class="breadcrumbs__link  breadcrumbs__link--active">Регистрация устройства</a>
+      </div>
+      <div class="device-registration__navigation">
+        <div class="device-registration__navigation-item active">
+          <div class="device-registration__navigation-number">1</div>
+          <p class="device-registration__navigation-name">Идентификация продукта</p>
+        </div>
+        <div class="device-registration__navigation-item">
+          <div class="device-registration__navigation-number">2</div>
+          <p class="device-registration__navigation-name">Контакты</p>
+        </div>
+        <div class="device-registration__navigation-item">
+          <div class="device-registration__navigation-number">3</div>
+          <p class="device-registration__navigation-name">Завершение регистрации</p>
+        </div>
+      </div>
+      <section class="device-data">
+        <p class="device-data__description">
+          Благодарим вас за то, что решили зарегистрировать ваше изделие Daichi! Данный процесс займет несколько минут.
+        </p>
+        <form class="device-data__form" method="get">
+          <label for="serial-number-1">
+            <p>Укажите гарантийный код устройства Daichi</p>
+            <button type="button"></button>
+          </label>
+          <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-1" maxlength="6" autofocus required>
+          <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-2" maxlength="6" required>
+          <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-3" maxlength="6" required>
+          <label for="purchase-date">Укажите дату покупки</label>
+          <div class="device-data__purchase-date-wrapper">
+            <input type="text" class="device-data__purchase-date" name="purchase-date" id="purcase-date" required>
+            <button class="device-data__calendar" type="button"></button>
+          </div>
+          <button class="device-data__submit  button"  disabled>Найти устройство</button>
+        </form>
+      </section>
+    </div>
+    <div class="popup-warranty hidden">
+      <div class="popup-warranty__overlay"></div>
+      <div class="popup-warranty__content">
+        <h2 class="popup-warranty__title">Где я могу найти серийный номер моего устройства</h2>
+        <div class="popup-warranty__image-box"></div>
+        <p class="popup-warranty__description">
+          Гарантийный код располагается на боковой панели корпуса внутреннего или внешнего блока кондиционера.
+        </p>
+        <button class="popup-warranty__close"></button>
+      </div>
+    </div>
+  </main>
+  <script src="js/vendor.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

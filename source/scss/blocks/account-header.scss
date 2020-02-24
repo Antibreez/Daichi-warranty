@@ -1,13 +1,15 @@
 .account-header {
   background: transparent linear-gradient(180deg, #E7ECEC 0%, #E3EAEA 100%) 0% 0% no-repeat padding-box;
-
-  //background-image: url("../img/midea.png");
 }
 
 .account-header__container {
-  margin: 0 auto;
-  max-width: 1470px;
-  padding: 92px 30px 30px;
+  @include container;
+
+  //margin: 0 auto;
+  //max-width: 1470px;
+  //padding: 92px 30px 30px;
+  padding-top: 92px;
+  padding-bottom: 30px;
 
   background-image: url("../img/midea.png");
   background-repeat: no-repeat;
