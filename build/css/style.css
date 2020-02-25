@@ -596,7 +596,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 1470px;
   max-width: 1920px;
   margin: 0 auto;
   font-family: "Gotham Pro", "Arial", "sana-serif";
@@ -682,7 +682,8 @@ img {
   margin-bottom: 26px;
 }
 
-.product-card__delete-link {
+.product-card__delete-link,
+.product-card__change {
   text-decoration: none;
   color: inherit;
 }
@@ -717,6 +718,10 @@ img {
   color: #00adef;
   border-color: #00adef;
   background-color: #ffffff;
+}
+
+.button:disabled {
+  background-color: #dddddd;
 }
 
 .authorization {
@@ -1354,10 +1359,6 @@ label[for="purchase-date"] {
   margin: 0 auto;
 }
 
-.device-data__submit:disabled {
-  background-color: #dddddd;
-}
-
 .popup-warranty {
   position: fixed;
   top: 0;
@@ -1440,4 +1441,104 @@ label[for="purchase-date"] {
 
 .popup-warranty__close:active {
   outline: none;
+}
+
+.pika-single * {
+  font-family: "Gotham Pro", "Arial", "sana-serif";
+  font-weight: 400;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+  min-height: 642px;
+  margin: 0 auto;
+  padding: 50px 119px;
+  background-color: #f6f6f6;
+  border: 1px solid #dddddd;
+}
+
+.contacts.hidden {
+  display: none;
+}
+
+.contacts__product-card {
+  min-height: 542px;
+}
+
+.contacts .product-card__registration-date {
+  margin-bottom: 25px;
+}
+
+.contacts__title {
+  width: 450px;
+  padding-top: 30px;
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 33px;
+}
+
+.contacts__description {
+  width: 450px;
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.contacts label {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.contacts input {
+  display: block;
+  width: 330px;
+  height: 48px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  font-size: 19px;
+  line-height: 23px;
+}
+
+.contacts input:hover, .contacts input:focus {
+  border-color: #00adef;
+  outline: none;
+}
+
+.contacts input.js--wrong-input {
+  border-color: #ff0000;
+}
+
+.contacts input::-webkit-input-placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+.contacts input::-moz-placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+.contacts input:-moz-placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+.contacts input:-ms-input-placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+.contacts__button {
+  width: 330px;
 }

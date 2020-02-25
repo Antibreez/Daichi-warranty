@@ -44,6 +44,7 @@
 
   var picker = new Pikaday({
     field: calendarButton,
+    firstDay: 1,
     onSelect: function() {
       var date = new Date(picker);
       calendarInput.value = getDate(date);
@@ -113,4 +114,4 @@
   });
 
   calendarInput.addEventListener('input', onCalendarInput);
-}())
+}());

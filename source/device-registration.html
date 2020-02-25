@@ -33,6 +33,7 @@
         </div>
       </div>
       <section class="device-data">
+        <h2 class="visually-hidden">Данные устройства</h2>
         <p class="device-data__description">
           Благодарим вас за то, что решили зарегистрировать ваше изделие Daichi! Данный процесс займет несколько минут.
         </p>
@@ -42,8 +43,8 @@
             <button type="button"></button>
           </label>
           <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-1" maxlength="6" autofocus required>
-          <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-2" maxlength="6" required>
-          <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-3" maxlength="6" required>
+          <input type="text" class="device-data__serial-number" name="serial-number-2" id="serial-number-2" maxlength="6" required>
+          <input type="text" class="device-data__serial-number" name="serial-number-3" id="serial-number-3" maxlength="6" required>
           <label for="purchase-date">Укажите дату покупки</label>
           <div class="device-data__purchase-date-wrapper">
             <input type="text" class="device-data__purchase-date" name="purchase-date" id="purcase-date" required>
@@ -51,6 +52,34 @@
           </div>
           <button class="device-data__submit  button"  disabled>Найти устройство</button>
         </form>
+      </section>
+      <section class="contacts">
+        <div class="contacts__left-wrapper">
+          <h2 class="contacts__title">Пожалуйста, укажите номер Вашего мобильного телефона:</h2>
+          <p class="contacts__description">
+            На указанный номер телефона будет отправлено SMS&#8209;сообщение с кодом подтверждения.<br> В дальнейшем данный номер телефона вам понадобится для входа в личный кабинет.
+          </p>
+          <form>
+            <label for="phone-number">Номер телефона:</label>
+            <input type="text" name="phone-number" id="phone-number" placeholder="+7(___)___-__-__">
+            <button class="contacts__button  button" type="submit" disabled>Отправить код</button>
+          </form>
+        </div>
+        <div class="contacts__product-card  product-card">
+          <div class="product-card__image-container">
+            <picture>
+              <source type="image/webp" srcset="img/FTXS20KRXS20L3.webp 1x, img/FTXS20KRXS20L3@2x.webp 2x">
+              <img class="product-card__image" src="img/FTXS20KRXS20L3.jpg" srcset="img/FTXS20KRXS20L3@2x.jpg 2x" alt="FTXS20K/RXS20L3">
+            </picture>
+          </div>
+          <p class="product-card__name-title">Бытовая сплит-система</p>
+          <p class="product-card__name">Daikin FTXS20K/RXS20L3</p>
+          <p class="product-card__serial-number-title">Серийный номер</p>
+          <p class="product-card__serial-number">ABCD1234GHYUDlLSC</p>
+          <p class="product-card__registration-date-title">Дата регистрации</p>
+          <p class="product-card__registration-date">18.02.2019</p>
+          <a class="product-card__change  button  button--white" href="#">Изменить</a>
+        </div>
       </section>
     </div>
     <div class="popup-warranty hidden">

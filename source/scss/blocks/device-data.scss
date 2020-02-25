@@ -174,10 +174,6 @@ label[for="purchase-date"] {
 .device-data__submit {
   width: 330px;
   margin: 0 auto;
-
-  &:disabled {
-    background-color: #dddddd;
-  }
 }
 
 .popup-warranty {
