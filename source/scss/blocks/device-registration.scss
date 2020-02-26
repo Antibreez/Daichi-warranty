@@ -1,3 +1,11 @@
+.device-registration.js--device-data .device-data {
+    display: block;
+}
+
+.device-registration.js--contacts .contacts {
+  display: flex;
+}
+
 .device-registration__container {
   @include container;
   //margin: 0 auto;
@@ -109,20 +117,39 @@
     background-color: #dddddd;
   }
 
-  &.active .device-registration__navigation-number {
+  &.js--active .device-registration__navigation-number {
     background-color: #00adef;
   }
 
-  &.active .device-registration__navigation-name {
+  &.js--active .device-registration__navigation-name {
     color: #000000;
   }
 
-  &.active::before {
+  &.js--active::before {
     background-color: #00adef;
+  }
+
+  &.js--checked .device-registration__navigation-number {
+    font-size: 0;
+  }
+
+  &.js--checked .device-registration__navigation-number::after {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+    left: 14px;
+
+    width: 16px;
+    height: 7px;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    transform: rotate(-45deg);
   }
 }
 
 .device-registration__navigation-number {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

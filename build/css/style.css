@@ -682,10 +682,13 @@ img {
   margin-bottom: 26px;
 }
 
-.product-card__delete-link,
-.product-card__change {
+.product-card__delete-link {
   text-decoration: none;
   color: inherit;
+}
+
+.product-card__change {
+  width: 280px;
 }
 
 .button {
@@ -1103,6 +1106,14 @@ img {
   margin-bottom: 7px;
 }
 
+.device-registration.js--device-data .device-data {
+  display: block;
+}
+
+.device-registration.js--contacts .contacts {
+  display: flex;
+}
+
 .device-registration__container {
   margin: 0 auto;
   width: 1470px;
@@ -1174,19 +1185,36 @@ img {
   background-color: #dddddd;
 }
 
-.device-registration__navigation-item.active .device-registration__navigation-number {
+.device-registration__navigation-item.js--active .device-registration__navigation-number {
   background-color: #00adef;
 }
 
-.device-registration__navigation-item.active .device-registration__navigation-name {
+.device-registration__navigation-item.js--active .device-registration__navigation-name {
   color: #000000;
 }
 
-.device-registration__navigation-item.active::before {
+.device-registration__navigation-item.js--active::before {
   background-color: #00adef;
 }
 
+.device-registration__navigation-item.js--checked .device-registration__navigation-number {
+  font-size: 0;
+}
+
+.device-registration__navigation-item.js--checked .device-registration__navigation-number::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 14px;
+  width: 16px;
+  height: 7px;
+  border-bottom: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
 .device-registration__navigation-number {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1214,6 +1242,10 @@ img {
   padding: 50px 119px;
   background-color: #f6f6f6;
   border: 1px solid #dddddd;
+}
+
+.device-data.hidden {
+  display: none;
 }
 
 .device-data__description {
@@ -1490,12 +1522,48 @@ label[for="purchase-date"] {
   line-height: 24px;
 }
 
+.contacts__selected-phone-title {
+  margin-bottom: 13px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.contacts__selected-phone {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 23px;
+  margin-right: 20px;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.contacts__selected-phone-change {
+  padding: 0;
+  font-size: 15px;
+  line-height: 17px;
+  color: #00adef;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.contacts__selected-phone-change:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #00adef;
+}
+
 .contacts label {
   display: inline-block;
   margin-bottom: 15px;
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
+}
+
+.contacts label[for='phone-code'].js--error {
+  color: #ff0000;
 }
 
 .contacts input {
@@ -1537,6 +1605,25 @@ label[for="purchase-date"] {
 .contacts input:-ms-input-placeholder {
   color: #888888;
   opacity: 1;
+}
+
+.contacts input[name='phone-code'] {
+  margin-bottom: 0;
+}
+
+.contacts input[name='phone-code'].js--wrong-input {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+.contacts__code-error-message {
+  width: 330px;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 45px;
+  font-size: 13px;
+  line-height: 15px;
+  color: #ff0000;
 }
 
 .contacts__button {

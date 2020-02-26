@@ -1,5 +1,11 @@
 (function () {
   var body = document.querySelector('body');
+
+  var deviceRegistration = document.querySelector('.device-registration');
+  var registrationItem = document.querySelectorAll('.device-registration__navigation-item');
+
+  var deviceData = document.querySelector('.device-data');
+  var deviceDataForm = document.querySelector('.device-data form');
   var warrantyCodeButton = document.querySelector("label[for='serial-number-1'] button");
   var popup = document.querySelector('.popup-warranty');
   var popupClose = document.querySelector('.popup-warranty__close');
@@ -20,7 +26,7 @@
       serialNumberInput[0].value.length === 6
       && serialNumberInput[1].value.length === 6
       && serialNumberInput[2].value.length === 6
-      && (calendarInput.value.length === 10 && calendarInput.value[9] !== 'Г')
+      && (/^[0-9.]+$/).test(calendarInput.value)
     ) {
       dataSubmit.removeAttribute('disabled');
     } else {
@@ -105,6 +111,15 @@
     closePopup();
   };
 
+  var onSubmit = function (evt) {
+    evt.preventDefault();
+    deviceRegistration.classList.add('js--contacts');
+    deviceRegistration.classList.remove('js--device-data');
+
+    registrationItem[0].classList.add('js--checked');
+    registrationItem[1].classList.add('js--active');
+  };
+
   warrantyCodeButton.addEventListener('click', onWarrantyCodeButtonClick);
   popupClose.addEventListener('click', onPopupCloseClick);
   popupOverlay.addEventListener('click', onPopupOverlayClick);
@@ -114,4 +129,5 @@
   });
 
   calendarInput.addEventListener('input', onCalendarInput);
+  deviceDataForm.addEventListener('submit', onSubmit);
 }());

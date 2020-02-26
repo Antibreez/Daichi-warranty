@@ -6,6 +6,10 @@
 
   background-color: #f6f6f6;
   border: 1px solid #dddddd;
+
+  &.hidden {
+    display: none;
+  }
 }
 
 .device-data__description {

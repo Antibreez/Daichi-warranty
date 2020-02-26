@@ -55,7 +55,10 @@
   margin-bottom: 26px;
 }
 
-.product-card__delete-link,
-.product-card__change {
+.product-card__delete-link {
   @include link-reset;
+}
+
+.product-card__change {
+  width: 280px;
 }
