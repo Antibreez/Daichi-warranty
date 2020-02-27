@@ -115,6 +115,9 @@
       }
 
       attempts++;
+    } else {
+      deviceRegistration.classList.add('js--personal-data');
+      deviceRegistration.classList.remove('js--contacts');
     }
   };
 

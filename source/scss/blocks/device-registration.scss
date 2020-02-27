@@ -6,6 +6,14 @@
   display: flex;
 }
 
+.device-registration.js--personal-data .personal-data {
+  display: block;
+}
+
+.device-registration.js--registration-end .registration-end {
+  display: block;
+}
+
 .device-registration__container {
   @include container;
   //margin: 0 auto;

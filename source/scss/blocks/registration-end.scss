@@ -1,0 +1,51 @@
+.registration-end {
+  width: 1170px;
+  min-height: 553px;
+  margin: 0 auto;
+  padding: 50px 120px;
+  padding-top: 80px;
+
+  background-color: #f6f6f6;
+  border: 1px solid #dddddd;
+  text-align: center;
+  font-size: 0;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.registration-end__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 29px;
+  text-align: left;
+}
+
+.registration-end__description {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.registration-end a {
+  @include link-reset;
+
+  display: inline-flex;
+  width: 330px;
+}
+
+.registration-end__recall {
+  margin-right: 30px;
+}
+
+.registration-end__account.button {
+  color: #ffffff;
+}

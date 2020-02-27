@@ -102,6 +102,54 @@
           <button class="product-card__change  button  button--white">Изменить</button>
         </div>
       </section>
+      <section class="personal-data hidden">
+        <h2 class="visually-hidden">Персональные данные</h2>
+        <p class="personal-data__description">
+          Предоставление контактной информации даст нам возможность оперативно связаться с вами в случае возникновения у вас вопросов о приобретенных устройствах или при необходимости гарантийного обслуживания.<br><br> На указанный E-mail будет отправлено письмо с подтверждением регистрации. Пожалуйста, сохраните полученное письмо для использования в будущем.
+        </p>
+        <form class="personal-data__form">
+          <label>
+            <p>Фамилия</p>
+            <input type="text" name="surname" required="">
+          </label>
+          <label>
+            <p>Имя</p>
+            <input type="text" name="name" required="">
+          </label>
+          <label>
+            <p>Отчество</p>
+            <input type="text" name="patronymic" required="">
+          </label>
+          <label>
+            <p>Город</p>
+            <input type="text" name="city" required="">
+          </label>
+          <label>
+            <p>E-mail</p>
+            <input type="email" name="email" required="">
+          </label>
+          <div class="personal-data__agreement-wrapper">
+            <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
+            <div class="personal-data__text-wrapper">
+              <label for="agreement">Я подтверждаю согласие на обработку, хранение и использование персональных данных.</label>
+              <a class="personal-data__agreement-link" href="#">Подробнее об обработке и хранении персональных данных</a>
+            </div>
+          </div>
+          <button class="personal-data__button button" type="submit" disabled="">Зарегистрировать изделие</button>
+        </form>
+      </section>
+      <section class="registration-end hidden">
+        <h2 class="registration-end__title">Регистрация успешно завершена!</h2>
+        <p class="registration-end__description">
+          Благодарим вас за регистрацию изделия Daichi! На вашу электронную почту отправлено письмо с подтверждением регистрации.<br><br> Изменить указанные данные вы можете в личном кабинете – для входа нажмите кнопку "Мой Daichi" в верхнем меню любой страницы сайта. Вы также можете использовать эту функцию, чтобы зарегистрировать другие устройства Daichi.
+        </p>
+        <h3 class="registration-end__title">Дальнейшие шаги….</h3>
+        <p class="registration-end__description">
+          Если вы уже воспользовались техникой Daichi, пожалуйста, оставьте свой отзыв. Ваше мнение очень важно для нас. Чтобы войти в личный кабинет, нажмите «Мой Daichi».
+        </p>
+        <a class="registration-end__recall button button--white" href="#">Оставить отзыв</a>
+        <a class="registration-end__account button" href="#">Мой Daichi</a>
+      </section>
     </div>
     <div class="popup-warranty hidden">
       <div class="popup-warranty__overlay"></div>

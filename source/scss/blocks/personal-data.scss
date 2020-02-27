@@ -1,0 +1,142 @@
+.personal-data {
+  width: 1170px;
+  min-height: 605px;
+  margin: 0 auto;
+  padding: 50px 120px;
+
+  background-color: #f6f6f6;
+  border: 1px solid #dddddd;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.personal-data__description {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.personal-data form {
+  font-size: 0;
+  line-height: 0;
+}
+
+.personal-data__form label:not([for="agreement"]) {
+  display: inline-block;
+  margin-bottom: 25px;
+
+  &:not(:nth-of-type(3)) {
+    margin-right: 26px;
+  }
+}
+
+.personal-data__form p {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+
+  &.js--error {
+    color: #ff0000;
+  }
+}
+
+.personal-data__form input[type="text"],
+.personal-data__form input[type="email"] {
+  width: 292px;
+  height: 48px;
+  padding-left: 15px;
+
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+
+  font-size: 15px;
+  line-height: 16px;
+
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    border-color: #00adef;
+    outline: none;
+  }
+
+  &.js--wrong-input {
+    border-color: #ff0000;
+  }
+}
+
+.personal-data__agreement-wrapper {
+  padding-left: 48px;
+  margin-bottom: 50px;
+}
+
+.personal-data__agreement-wrapper input:checked + .personal-data__text-wrapper label::before {
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% left 50%;
+}
+
+.personal-data__text-wrapper {
+  font-size: 13px;
+  line-height: 15px;
+
+  &.js--error {
+    color: #ff0000;
+  }
+}
+
+.personal-data__agreement-wrapper label {
+  position: relative;
+
+  font-weight: 300;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: -48px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 2px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+  }
+
+  &:hover::before {
+    cursor: pointer;
+  }
+
+  &.js--wrong-input::before {
+    border-color: #ff0000;
+  }
+}
+
+.personal-data__agreement-wrapper a {
+  @include link-reset;
+
+  display: block;
+
+  font-weight: 400;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.personal-data__button {
+  width: 330px;
+  margin: 0 auto;
+}

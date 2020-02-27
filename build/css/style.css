@@ -1114,6 +1114,14 @@ img {
   display: flex;
 }
 
+.device-registration.js--personal-data .personal-data {
+  display: block;
+}
+
+.device-registration.js--registration-end .registration-end {
+  display: block;
+}
+
 .device-registration__container {
   margin: 0 auto;
   width: 1470px;
@@ -1628,4 +1636,187 @@ label[for="purchase-date"] {
 
 .contacts__button {
   width: 330px;
+}
+
+.personal-data {
+  width: 1170px;
+  min-height: 605px;
+  margin: 0 auto;
+  padding: 50px 120px;
+  background-color: #f6f6f6;
+  border: 1px solid #dddddd;
+}
+
+.personal-data.hidden {
+  display: none;
+}
+
+.personal-data__description {
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.personal-data form {
+  font-size: 0;
+  line-height: 0;
+}
+
+.personal-data__form label:not([for="agreement"]) {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.personal-data__form label:not([for="agreement"]):not(:nth-of-type(3)) {
+  margin-right: 26px;
+}
+
+.personal-data__form p {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.personal-data__form p.js--error {
+  color: #ff0000;
+}
+
+.personal-data__form input[type="text"],
+.personal-data__form input[type="email"] {
+  width: 292px;
+  height: 48px;
+  padding-left: 15px;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 16px;
+  transition: all 0.3s ease;
+}
+
+.personal-data__form input[type="text"]:hover, .personal-data__form input[type="text"]:focus,
+.personal-data__form input[type="email"]:hover,
+.personal-data__form input[type="email"]:focus {
+  border-color: #00adef;
+  outline: none;
+}
+
+.personal-data__form input[type="text"].js--wrong-input,
+.personal-data__form input[type="email"].js--wrong-input {
+  border-color: #ff0000;
+}
+
+.personal-data__agreement-wrapper {
+  padding-left: 48px;
+  margin-bottom: 50px;
+}
+
+.personal-data__agreement-wrapper input:checked + .personal-data__text-wrapper label::before {
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% left 50%;
+}
+
+.personal-data__text-wrapper {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.personal-data__text-wrapper.js--error {
+  color: #ff0000;
+}
+
+.personal-data__agreement-wrapper label {
+  position: relative;
+  font-weight: 300;
+}
+
+.personal-data__agreement-wrapper label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -48px;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+.personal-data__agreement-wrapper label:hover::before {
+  cursor: pointer;
+}
+
+.personal-data__agreement-wrapper label.js--wrong-input::before {
+  border-color: #ff0000;
+}
+
+.personal-data__agreement-wrapper a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  font-weight: 400;
+}
+
+.personal-data__agreement-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.personal-data__button {
+  width: 330px;
+  margin: 0 auto;
+}
+
+.registration-end {
+  width: 1170px;
+  min-height: 553px;
+  margin: 0 auto;
+  padding: 50px 120px;
+  padding-top: 80px;
+  background-color: #f6f6f6;
+  border: 1px solid #dddddd;
+  text-align: center;
+  font-size: 0;
+}
+
+.registration-end.hidden {
+  display: none;
+}
+
+.registration-end__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 29px;
+  text-align: left;
+}
+
+.registration-end__description {
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.registration-end a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  width: 330px;
+}
+
+.registration-end__recall {
+  margin-right: 30px;
+}
+
+.registration-end__account.button {
+  color: #ffffff;
 }
