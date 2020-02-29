@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  min-width: 1470px;
-  max-width: 1920px;
+  min-width: $width-mobile;
+  max-width: $width-desktop-max;
   margin: 0 auto;
 
   font-family: $font;

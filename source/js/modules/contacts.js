@@ -11,10 +11,11 @@
   var codeButton = document.querySelector('.contacts__code-form button')
   var phoneForm = document.querySelector('.contacts__phone-form');
   var codeForm = document.querySelector('.contacts__code-form');
-  var changeButton = document.querySelector('.contacts__product-card .product-card__change');
+  var productChangeButton = document.querySelector('.contacts__product-card .product-card__change');
   var selectedPhone = document.querySelector('.contacts__selected-phone');
   var codeError = document.querySelector('.contacts__code-error-message');
   var codeLabel = document.querySelector('.contacts__code-form label');
+  var phoneChangeButton = document.querySelector('.contacts__selected-phone-change');
 
   var CORRECT_CODE = '0000000';
   var ERROR_MESSAGES = {
@@ -67,7 +68,7 @@
     }
   };
 
-  var onChangeButtonClick = function () {
+  var onProductChangeClick = function () {
     deviceRegistration.classList.remove('js--contacts');
     deviceRegistration.classList.add('js--device-data');
 
@@ -83,7 +84,16 @@
     selectedPhone.textContent = phoneInput.value;
     hide(contactsPhone);
     show(contactsCode);
+
+    codeInput.focus();
   };
+
+  var onPhoneChangeClick = function () {
+    hide(contactsCode);
+    show(contactsPhone);
+
+    phoneInput.focus();
+  }
 
   var onCodeInput = function () {
     clearError();
@@ -122,8 +132,9 @@
   };
 
   phoneInput.addEventListener('input', onPhoneInput);
-  changeButton.addEventListener('click', onChangeButtonClick);
+  productChangeButton.addEventListener('click', onProductChangeClick);
   phoneForm.addEventListener('submit', onPhoneSubmit);
   codeInput.addEventListener('input', onCodeInput);
   codeForm.addEventListener('submit', onCodeSubmit);
+  phoneChangeButton.addEventListener('click', onPhoneChangeClick);
 })();

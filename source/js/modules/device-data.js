@@ -1,5 +1,6 @@
 (function () {
   var body = document.querySelector('body');
+  var phoneInput = document.querySelector("input[name='phone-number']");
 
   var deviceRegistration = document.querySelector('.device-registration');
   var registrationItem = document.querySelectorAll('.device-registration__navigation-item');
@@ -118,6 +119,8 @@
 
     registrationItem[0].classList.add('js--checked');
     registrationItem[1].classList.add('js--active');
+
+    phoneInput.focus();
   };
 
   warrantyCodeButton.addEventListener('click', onWarrantyCodeButtonClick);

@@ -1,5 +1,5 @@
 .device-data {
-  width: 1170px;
+  max-width: 1170px;
   min-height: 512px;
   margin: 0 auto;
   padding: 50px 119px;
@@ -12,6 +12,10 @@
   }
 }
 
+.device-data__title {
+  display: none;
+}
+
 .device-data__description {
   margin: 0;
   margin-bottom: 50px;
@@ -21,16 +25,26 @@
   line-height: 20px;
 }
 
+.device-data__description-break {
+  display: none;
+}
+
 .device-data__form {
   position: relative;
 
   font-size: 0;
+}
+
+.device-data__input-wrapper {
+  position: relative;
+
+  margin-bottom: 50px;
 
   &::before {
     content: "";
 
     position: absolute;
-    top: 74px;
+    top: 24px;
     left: 295px;
 
     width: 16px;
@@ -43,7 +57,7 @@
     content: "";
 
     position: absolute;
-    top: 74px;
+    top: 24px;
     right: 295px;
 
     width: 16px;
@@ -74,7 +88,7 @@ label[for="serial-number-1"] p {
 }
 
 label[for="serial-number-1"] button {
-  width: 26px;
+  min-width: 26px;
   height: 26px;
 
   background-color: transparent;
@@ -93,7 +107,6 @@ label[for="serial-number-1"] button {
 .device-data__serial-number {
   width: 283px;
   height: 48px;
-  margin-bottom: 50px;
 
   font-weight: 300;
   font-size: 19px;
@@ -272,5 +285,160 @@ label[for="purchase-date"] {
 
   &:active {
     outline: none;
+  }
+}
+
+@include desktop-medium {
+  .device-data {
+    padding: 50px 0;
+  }
+
+  .device-data__form {
+    width: 83%;
+    margin: 0 auto;
+  }
+
+  .device-data__description {
+    line-height: 21px;
+  }
+
+  .device-data__input-wrapper {
+    &::before {
+      left: 32.6%;
+      margin-left: -8px;
+    }
+
+    &::after {
+      left: 67.4%;
+      margin-left: -8px;
+    }
+  }
+
+  .device-data__serial-number {
+    width: 30.4%;
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      margin-right: 4.4%;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: #00adef;
+      outline: none;
+    }
+
+    &.js--wrong-input {
+      border-color: #ff0000;
+    }
+  }
+}
+
+@include tablet {
+  .device-data__form {
+    width: 74.1%;
+    margin: 0 auto;
+  }
+
+}
+
+@include mobile-l {
+  .device-data {
+    border-left: none;
+    border-right: none;
+  }
+
+  .device-data__title {
+    display: block;
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .device-data__form {
+    width: 86.7%;
+  }
+
+  .device-data__serial-number,
+  .device-data__purchase-date {
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  .device-data__description {
+    margin-bottom: 30px;
+
+    text-align: center;
+    line-height: 23px;
+  }
+
+  .device-data__description-break {
+    display: block;
+  }
+
+  .device-data label[for="serial-number-1"] {
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .device-data label[for="serial-number-1"] p,
+  .device-data label[for="purchase-date"] {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .device-data label[for="purchase-date"] {
+    margin-bottom: 20px;
+  }
+
+  .device-data__input-wrapper {
+    &::before {
+      left: 32.6%;
+
+      width: 10px;
+      margin-left: -5px;
+    }
+
+    &::after {
+      left: 67.4%;
+
+      width: 10px;
+      margin-left: -5px;
+    }
+  }
+}
+
+@include mobile {
+  .device-data__form {
+    width: 90%;
+  }
+
+  .device-data__title {
+    margin-bottom: 33px;
+
+    font-size: 19px;
+    line-height: 21px;
+  }
+
+  .device-data__description {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .device-data label[for="serial-number-1"] p {
+    margin-right: 0;
+    padding-right: 10px;
+  }
+
+  .device-data__submit {
+    width: 288px;
   }
 }

@@ -1,6 +1,14 @@
 //ШРИФТЫ
-$font: "Gotham Pro", "Arial", "sana-serif";
+$font: "Gotham Pro", "Arial", "Helvetica", "Helvetica CY", "Nimbus Sans";
 
 // РЕТИНА
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// РАЗРЕШЕНИЯ
+$width-desktop-max: 1920px;
+$width-desktop-medium: 1276px;
+$width-desktop: 1024px;
+$width-tablet: 768px;
+$width-mobile-large: 480px;
+$width-mobile: 320px;

@@ -15,7 +15,7 @@
     <div class="device-registration__container">
       <div class="breadcrumbs">
         <a class="breadcrumbs__link" href="#">Главная</a>
-        <a class="breadcrumbs__link" href="account.html">Личный кабинет</a>
+        <a class="breadcrumbs__link" href="#">Сервис</a>
         <a class="breadcrumbs__link  breadcrumbs__link--active">Регистрация устройства</a>
       </div>
       <div class="device-registration__navigation">
@@ -33,18 +33,20 @@
         </div>
       </div>
       <section class="device-data hidden">
-        <h2 class="visually-hidden">Данные устройства</h2>
-        <p class="device-data__description">
-          Благодарим вас за то, что решили зарегистрировать ваше изделие Daichi! Данный процесс займет несколько минут.
-        </p>
         <form class="device-data__form">
+          <h2 class="device-data__title">Идентификация продукта</h2>
+          <p class="device-data__description">
+            Благодарим вас за то, что решили зарегистрировать ваше изделие Daichi!<br class="device-data__description-break"> Данный процесс займет несколько минут.
+          </p>
           <label for="serial-number-1">
             <p>Укажите гарантийный код устройства Daichi</p>
             <button type="button"></button>
           </label>
-          <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-1" maxlength="6" autofocus="" required="">
-          <input type="text" class="device-data__serial-number" name="serial-number-2" id="serial-number-2" maxlength="6" required="">
-          <input type="text" class="device-data__serial-number" name="serial-number-3" id="serial-number-3" maxlength="6" required="">
+         <div class="device-data__input-wrapper">
+            <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-1" maxlength="6" autofocus="" required="">
+            <input type="text" class="device-data__serial-number" name="serial-number-2" id="serial-number-2" maxlength="6" required="">
+            <input type="text" class="device-data__serial-number" name="serial-number-3" id="serial-number-3" maxlength="6" required="">
+         </div>
           <label for="purchase-date">Укажите дату покупки</label>
           <div class="device-data__purchase-date-wrapper">
             <input type="text" class="device-data__purchase-date" name="purchase-date" id="purcase-date" required="">

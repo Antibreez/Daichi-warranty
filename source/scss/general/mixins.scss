@@ -1,3 +1,39 @@
+//РАЗРЕШЕНИЯ
+// Меньше 1920
+@mixin desktop {
+  @media (max-width: $width-desktop-max - 1px) {
+    @content;
+  }
+}
+
+// Меньше 1276
+@mixin desktop-medium {
+  @media (max-width: $width-desktop-medium - 1px) {
+    @content;
+  }
+}
+
+// Меньше 1024
+@mixin tablet {
+  @media (max-width: $width-desktop - 1px) {
+    @content;
+  }
+}
+
+// Меньше 768
+@mixin mobile-l {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+
+// Меньше 480
+@mixin mobile {
+  @media (max-width: $width-mobile-large - 1px) {
+    @content;
+  }
+}
+
 // СБРОС СТИЛЕЙ
 
 @mixin list-reset {
@@ -33,7 +69,11 @@
 // КОНТЕЙНЕР
 @mixin container {
   margin: 0 auto;
-  width: 1470px;
+  max-width: 1470px;
   padding-left: 30px;
   padding-right: 30px;
+
+  @media (max-width: $width-tablet - 1px) {
+    padding: 0;
+  }
 }
