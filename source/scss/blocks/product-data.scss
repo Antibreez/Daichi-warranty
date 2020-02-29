@@ -1,4 +1,4 @@
-.device-data {
+.product-data {
   max-width: 1170px;
   min-height: 512px;
   margin: 0 auto;
@@ -12,11 +12,11 @@
   }
 }
 
-.device-data__title {
+.product-data__title {
   display: none;
 }
 
-.device-data__description {
+.product-data__description {
   margin: 0;
   margin-bottom: 50px;
 
@@ -25,17 +25,17 @@
   line-height: 20px;
 }
 
-.device-data__description-break {
+.product-data__description-break {
   display: none;
 }
 
-.device-data__form {
+.product-data__form {
   position: relative;
 
   font-size: 0;
 }
 
-.device-data__input-wrapper {
+.product-data__input-wrapper {
   position: relative;
 
   margin-bottom: 50px;
@@ -104,7 +104,7 @@ label[for="serial-number-1"] button {
   }
 }
 
-.device-data__serial-number {
+.product-data__serial-number {
   width: 283px;
   height: 48px;
 
@@ -143,14 +143,14 @@ label[for="purchase-date"] {
   line-height: 21px;
 }
 
-.device-data__purchase-date-wrapper {
+.product-data__purchase-date-wrapper {
   position: relative;
 
   margin-bottom: 50px;
   width: 100%;
 }
 
-.device-data__purchase-date {
+.product-data__purchase-date {
   width: 100%;
   height: 48px;
   padding-left: 15px;
@@ -175,7 +175,7 @@ label[for="purchase-date"] {
   }
 }
 
-.device-data__calendar {
+.product-data__calendar {
   position: absolute;
   top: 11px;
   right: 15px;
@@ -188,7 +188,7 @@ label[for="purchase-date"] {
   background-image: url("../img/calendar.svg");
 }
 
-.device-data__submit {
+.product-data__submit {
   width: 330px;
   margin: 0 auto;
 }
@@ -289,20 +289,20 @@ label[for="purchase-date"] {
 }
 
 @include desktop-medium {
-  .device-data {
+  .product-data {
     padding: 50px 0;
   }
 
-  .device-data__form {
+  .product-data__form {
     width: 83%;
     margin: 0 auto;
   }
 
-  .device-data__description {
+  .product-data__description {
     line-height: 21px;
   }
 
-  .device-data__input-wrapper {
+  .product-data__input-wrapper {
     &::before {
       left: 32.6%;
       margin-left: -8px;
@@ -314,7 +314,7 @@ label[for="purchase-date"] {
     }
   }
 
-  .device-data__serial-number {
+  .product-data__serial-number {
     width: 30.4%;
 
     &:first-of-type,
@@ -335,7 +335,7 @@ label[for="purchase-date"] {
 }
 
 @include tablet {
-  .device-data__form {
+  .product-data__form {
     width: 74.1%;
     margin: 0 auto;
   }
@@ -343,12 +343,12 @@ label[for="purchase-date"] {
 }
 
 @include mobile-l {
-  .device-data {
+  .product-data {
     border-left: none;
     border-right: none;
   }
 
-  .device-data__title {
+  .product-data__title {
     display: block;
     margin: 0;
     margin-bottom: 25px;
@@ -359,28 +359,28 @@ label[for="purchase-date"] {
     text-align: center;
   }
 
-  .device-data__form {
+  .product-data__form {
     width: 86.7%;
   }
 
-  .device-data__serial-number,
-  .device-data__purchase-date {
+  .product-data__serial-number,
+  .product-data__purchase-date {
     font-size: 15px;
     line-height: 16px;
   }
 
-  .device-data__description {
+  .product-data__description {
     margin-bottom: 30px;
 
     text-align: center;
     line-height: 23px;
   }
 
-  .device-data__description-break {
+  .product-data__description-break {
     display: block;
   }
 
-  .device-data label[for="serial-number-1"] {
+  .product-data label[for="serial-number-1"] {
     margin-bottom: 20px;
 
     display: flex;
@@ -388,18 +388,18 @@ label[for="purchase-date"] {
     align-items: center;
   }
 
-  .device-data label[for="serial-number-1"] p,
-  .device-data label[for="purchase-date"] {
+  .product-data label[for="serial-number-1"] p,
+  .product-data label[for="purchase-date"] {
     font-weight: 400;
     font-size: 15px;
     line-height: 17px;
   }
 
-  .device-data label[for="purchase-date"] {
+  .product-data label[for="purchase-date"] {
     margin-bottom: 20px;
   }
 
-  .device-data__input-wrapper {
+  .product-data__input-wrapper {
     &::before {
       left: 32.6%;
 
@@ -417,28 +417,44 @@ label[for="purchase-date"] {
 }
 
 @include mobile {
-  .device-data__form {
+  .product-data__form {
     width: 90%;
   }
 
-  .device-data__title {
+  .product-data__title {
     margin-bottom: 33px;
 
     font-size: 19px;
     line-height: 21px;
   }
 
-  .device-data__description {
+  .product-data__description {
     font-size: 13px;
     line-height: 22px;
   }
 
-  .device-data label[for="serial-number-1"] p {
+  .product-data label[for="serial-number-1"] p {
     margin-right: 0;
     padding-right: 10px;
   }
 
-  .device-data__submit {
+  .product-data__submit {
     width: 288px;
+  }
+
+  .product-data__input-wrapper {
+    &::before {
+      left: 32.6%;
+
+      width: 5px;
+      margin-left: -2px;
+    }
+
+    &::after {
+      left: 67.4%;
+
+      width: 5px;
+      margin-left: -2px;
+    }
   }
 }

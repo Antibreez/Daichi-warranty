@@ -2,21 +2,21 @@
   var body = document.querySelector('body');
   var phoneInput = document.querySelector("input[name='phone-number']");
 
-  var deviceRegistration = document.querySelector('.device-registration');
-  var registrationItem = document.querySelectorAll('.device-registration__navigation-item');
+  var productRegistration = document.querySelector('.product-registration');
+  var registrationItem = document.querySelectorAll('.product-registration__navigation-item');
 
-  var deviceData = document.querySelector('.device-data');
-  var deviceDataForm = document.querySelector('.device-data form');
+  var productData = document.querySelector('.product-data');
+  var productDataForm = document.querySelector('.product-data form');
   var warrantyCodeButton = document.querySelector("label[for='serial-number-1'] button");
   var popup = document.querySelector('.popup-warranty');
   var popupClose = document.querySelector('.popup-warranty__close');
   var popupOverlay = document.querySelector('.popup-warranty__overlay');
 
-  var calendarInput = document.querySelector('.device-data__purchase-date');
-  var calendarButton = document.querySelector('.device-data__calendar');
+  var calendarInput = document.querySelector('.product-data__purchase-date');
+  var calendarButton = document.querySelector('.product-data__calendar');
 
-  var serialNumberInput = document.querySelectorAll('.device-data__serial-number');
-  var dataSubmit = document.querySelector('.device-data__submit');
+  var serialNumberInput = document.querySelectorAll('.product-data__serial-number');
+  var dataSubmit = document.querySelector('.product-data__submit');
 
   if(!warrantyCodeButton) {
     return;
@@ -114,8 +114,8 @@
 
   var onSubmit = function (evt) {
     evt.preventDefault();
-    deviceRegistration.classList.add('js--contacts');
-    deviceRegistration.classList.remove('js--device-data');
+    productRegistration.classList.add('js--contacts');
+    productRegistration.classList.remove('js--product-data');
 
     registrationItem[0].classList.add('js--checked');
     registrationItem[1].classList.add('js--active');
@@ -132,5 +132,5 @@
   });
 
   calendarInput.addEventListener('input', onCalendarInput);
-  deviceDataForm.addEventListener('submit', onSubmit);
+  productDataForm.addEventListener('submit', onSubmit);
 }());

@@ -5,71 +5,72 @@
   <meta charset="UTF-8">
   <title>Daichi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preload" href="fonts/GothamPro.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/GothamPro-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/GothamPro.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/GothamPro-Light.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css" type="text/css">
 </head>
 
 <body>
-  <main class="device-registration  js--device-data">
-    <div class="device-registration__container">
+  <main class="product-registration  js--product-data">
+    <div class="product-registration__container">
       <div class="breadcrumbs">
         <a class="breadcrumbs__link" href="#">Главная</a>
         <a class="breadcrumbs__link" href="#">Сервис</a>
         <a class="breadcrumbs__link  breadcrumbs__link--active">Регистрация устройства</a>
       </div>
-      <div class="device-registration__navigation">
-        <div class="device-registration__navigation-item js--active">
-          <div class="device-registration__navigation-number">1</div>
-          <p class="device-registration__navigation-name">Идентификация продукта</p>
+      <div class="product-registration__navigation">
+        <div class="product-registration__navigation-item js--active">
+          <div class="product-registration__navigation-number">1</div>
+          <p class="product-registration__navigation-name">Идентификация продукта</p>
         </div>
-        <div class="device-registration__navigation-item">
-          <div class="device-registration__navigation-number">2</div>
-          <p class="device-registration__navigation-name">Контакты</p>
+        <div class="product-registration__navigation-item">
+          <div class="product-registration__navigation-number">2</div>
+          <p class="product-registration__navigation-name">Контакты</p>
         </div>
-        <div class="device-registration__navigation-item">
-          <div class="device-registration__navigation-number">3</div>
-          <p class="device-registration__navigation-name">Завершение регистрации</p>
+        <div class="product-registration__navigation-item">
+          <div class="product-registration__navigation-number">3</div>
+          <p class="product-registration__navigation-name">Завершение регистрации</p>
         </div>
       </div>
-      <section class="device-data hidden">
-        <form class="device-data__form">
-          <h2 class="device-data__title">Идентификация продукта</h2>
-          <p class="device-data__description">
-            Благодарим вас за то, что решили зарегистрировать ваше изделие Daichi!<br class="device-data__description-break"> Данный процесс займет несколько минут.
+      <section class="product-data hidden">
+        <form class="product-data__form">
+          <h2 class="product-data__title">Идентификация продукта</h2>
+          <p class="product-data__description">
+            Благодарим вас за то, что решили зарегистрировать ваше изделие Daichi!<br class="product-data__description-break"> Данный процесс займет несколько минут.
           </p>
           <label for="serial-number-1">
             <p>Укажите гарантийный код устройства Daichi</p>
             <button type="button"></button>
           </label>
-         <div class="device-data__input-wrapper">
-            <input type="text" class="device-data__serial-number" name="serial-number-1" id="serial-number-1" maxlength="6" autofocus required>
-            <input type="text" class="device-data__serial-number" name="serial-number-2" id="serial-number-2" maxlength="6" required>
-            <input type="text" class="device-data__serial-number" name="serial-number-3" id="serial-number-3" maxlength="6" required>
+         <div class="product-data__input-wrapper">
+            <input type="text" class="product-data__serial-number" name="serial-number-1" id="serial-number-1" maxlength="6" autofocus="" required="">
+            <input type="text" class="product-data__serial-number" name="serial-number-2" id="serial-number-2" maxlength="6" required="">
+            <input type="text" class="product-data__serial-number" name="serial-number-3" id="serial-number-3" maxlength="6" required="">
          </div>
           <label for="purchase-date">Укажите дату покупки</label>
-          <div class="device-data__purchase-date-wrapper">
-            <input type="text" class="device-data__purchase-date" name="purchase-date" id="purcase-date" required>
-            <button class="device-data__calendar" type="button"></button>
+          <div class="product-data__purchase-date-wrapper">
+            <input type="text" class="product-data__purchase-date" name="purchase-date" id="purcase-date" required="">
+            <button class="product-data__calendar" type="button"></button>
           </div>
-          <button class="device-data__submit  button"  disabled>Найти устройство</button>
+          <button class="product-data__submit  button" disabled="">Найти устройство</button>
         </form>
       </section>
       <section class="contacts hidden">
+        <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__left-wrapper">
           <div class="contacts__phone-number">
-            <h2 class="contacts__title">Пожалуйста, укажите номер Вашего мобильного телефона:</h2>
+            <p class="contacts__message">Пожалуйста, укажите номер Вашего мобильного телефона:</p>
             <p class="contacts__description">
               На указанный номер телефона будет отправлено SMS&#8209;сообщение с кодом подтверждения.<br> В дальнейшем данный номер телефона вам понадобится для входа в личный кабинет.
             </p>
             <form class="contacts__phone-form">
               <label for="phone-number">Номер телефона:</label>
               <input type="text" name="phone-number" id="phone-number" placeholder="+7(___)___-__-__">
-              <button class="contacts__button  button" type="submit" disabled>Отправить код</button>
+              <button class="contacts__button  button" type="submit" disabled="">Отправить код</button>
             </form>
           </div>
           <div class="contacts__code  hidden">
-            <h2 class="contacts__title">Введите полученный код подтверждения:</h2>
+            <p class="contacts__message">Введите полученный код подтверждения:</p>
             <p class="contacts__selected-phone-title">
               Указанный номер телефона
             </p>
@@ -84,7 +85,7 @@
               <label for="phone-code">Код подтверждения</label>
               <input type="text" name="phone-code" id="phone-code">
               <p class="contacts__code-error-message"></p>
-              <button class="contacts__button  button" type="submit" disabled>Отправить код</button>
+              <button class="contacts__button  button" type="submit" disabled="">Отправить код</button>
             </form>
           </div>
         </div>
@@ -105,30 +106,30 @@
         </div>
       </section>
       <section class="personal-data hidden">
-        <h2 class="visually-hidden">Персональные данные</h2>
+        <h2 class="personal-data__title">Контакты</h2>
         <p class="personal-data__description">
           Предоставление контактной информации даст нам возможность оперативно связаться с вами в случае возникновения у вас вопросов о приобретенных устройствах или при необходимости гарантийного обслуживания.<br><br> На указанный E-mail будет отправлено письмо с подтверждением регистрации. Пожалуйста, сохраните полученное письмо для использования в будущем.
         </p>
         <form class="personal-data__form">
           <label>
             <p>Фамилия</p>
-            <input type="text" name="surname" required>
+            <input type="text" name="surname" required="">
           </label>
           <label>
             <p>Имя</p>
-            <input type="text" name="name" required>
+            <input type="text" name="name" required="">
           </label>
           <label>
             <p>Отчество</p>
-            <input type="text" name="patronymic" required>
+            <input type="text" name="patronymic" required="">
           </label>
           <label>
             <p>Город</p>
-            <input type="text" name="city" required>
+            <input type="text" name="city" required="">
           </label>
           <label>
             <p>E-mail</p>
-            <input type="email" name="email" required>
+            <input type="email" name="email" required="">
           </label>
           <div class="personal-data__agreement-wrapper">
             <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
@@ -137,15 +138,16 @@
               <a class="personal-data__agreement-link" href="#">Подробнее об обработке и хранении персональных данных</a>
             </div>
           </div>
-          <button class="personal-data__button button" type="submit" disabled>Зарегистрировать изделие</button>
+          <button class="personal-data__button button" type="submit" disabled="">Зарегистрировать изделие</button>
         </form>
       </section>
       <section class="registration-end hidden">
-        <h2 class="registration-end__title">Регистрация успешно завершена!</h2>
+        <h2 class="registration-end__title">Завершение регистрации</h2>
+        <p class="registration-end__message">Регистрация успешно завершена!</p>
         <p class="registration-end__description">
           Благодарим вас за регистрацию изделия Daichi! На вашу электронную почту отправлено письмо с подтверждением регистрации.<br><br> Изменить указанные данные вы можете в личном кабинете – для входа нажмите кнопку "Мой Daichi" в верхнем меню любой страницы сайта. Вы также можете использовать эту функцию, чтобы зарегистрировать другие устройства Daichi.
         </p>
-        <h3 class="registration-end__title">Дальнейшие шаги….</h3>
+        <p class="registration-end__next-step">Дальнейшие шаги….</p>
         <p class="registration-end__description">
           Если вы уже воспользовались техникой Daichi, пожалуйста, оставьте свой отзыв. Ваше мнение очень важно для нас. Чтобы войти в личный кабинет, нажмите «Мой Daichi».
         </p>

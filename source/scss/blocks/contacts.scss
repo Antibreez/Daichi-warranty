@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  width: 1170px;
+  max-width: 1170px;
   min-height: 642px;
   margin: 0 auto;
   padding: 50px 119px;
@@ -24,7 +24,11 @@
 }
 
 .contacts__title {
-  width: 450px;
+  display: none;
+}
+
+.contacts__message {
+  max-width: 450px;
   padding-top: 30px;
   margin: 0;
   margin-bottom: 25px;
@@ -35,7 +39,7 @@
 }
 
 .contacts__description {
-  width: 450px;
+  max-width: 450px;
   margin: 0;
   margin-bottom: 24px;
 
@@ -45,6 +49,7 @@
 }
 
 .contacts__selected-phone-title {
+  margin: 0;
   margin-bottom: 13px;
 
   font-weight: 300;
@@ -147,7 +152,7 @@
 }
 
 .contacts__code-error-message {
-  width: 330px;
+  max-width: 330px;
   margin: 0;
   margin-top: 5px;
   margin-bottom: 45px;
@@ -159,4 +164,145 @@
 
 .contacts__button {
   width: 330px;
+}
+
+.contacts__message {
+  padding-right: 70px;
+}
+
+@include desktop-medium {
+  .contacts {
+    min-height: 600px;
+    padding: 50px 0;
+  }
+
+  .contacts__product-card {
+    width: 286px;
+    min-height: 500px;
+    margin-right: 8.6%;
+    align-self: flex-start;
+  }
+
+  .contacts__product-card .product-card__image-container {
+   width: 230px;
+   height: 172px;
+   margin-bottom: 30px;
+  }
+
+  .contacts__product-card .product-card__change {
+    width: 239px;
+  }
+
+  .contacts__left-wrapper {
+    padding-right: 30px;
+    margin-left: 8.6%;
+  }
+
+  .contacts__description {
+    line-height: 23px;
+  }
+
+  .contacts__message {
+    line-height: 34px;
+  }
+}
+
+@include tablet {
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts__left-wrapper {
+    width: 74.1%;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  .contacts__message {
+    max-width: none;
+    padding: 0;
+  }
+
+  .contacts__description {
+    max-width: none;
+  }
+
+  .contacts__product-card {
+    margin: 0 auto;
+  }
+}
+
+@include mobile-l {
+  .contacts__left-wrapper {
+    width: 87.1%;
+  }
+
+  .contacts__title {
+    display: block;
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 29px;
+  }
+
+  .contacts__message {
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .contacts__description {
+    text-align: center;
+  }
+
+  .contacts input {
+    width: 100%;
+  }
+
+  .contacts__button {
+    margin: 0 auto;
+  }
+
+  .contacts__product-card {
+    width: 87.1%;
+  }
+
+  .contacts__product-card .product-card__change {
+    width: 100%;
+  }
+}
+
+@include mobile {
+  .contacts__left-wrapper {
+    width: 90.6%;
+  }
+
+  .contacts__title {
+    font-size: 19px;
+    line-height: 21px;
+  }
+
+  .contacts__message {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .contacts__description {
+    padding: 0 5px;
+    margin-bottom: 27px;
+
+    font-size: 13px;
+  }
+
+  .contacts__button {
+    width: 100%;
+  }
+
+  .contacts__product-card {
+    width: 90.6%;
+  }
 }

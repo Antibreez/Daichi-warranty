@@ -54,8 +54,8 @@
 })();
 
 (function () {
-  var deviceRegistration = document.querySelector('.device-registration');
-  var registrationItem = document.querySelectorAll('.device-registration__navigation-item');
+  var productRegistration = document.querySelector('.product-registration');
+  var registrationItem = document.querySelectorAll('.product-registration__navigation-item');
 
   var contacts = document.querySelector('.contacts');
   var contactsPhone = document.querySelector('.contacts__phone-number');
@@ -124,8 +124,8 @@
   };
 
   var onProductChangeClick = function () {
-    deviceRegistration.classList.remove('js--contacts');
-    deviceRegistration.classList.add('js--device-data');
+    productRegistration.classList.remove('js--contacts');
+    productRegistration.classList.add('js--product-data');
 
     registrationItem[0].classList.remove('js--checked');
     registrationItem[1].classList.remove('js--active');
@@ -181,8 +181,8 @@
 
       attempts++;
     } else {
-      deviceRegistration.classList.add('js--personal-data');
-      deviceRegistration.classList.remove('js--contacts');
+      productRegistration.classList.add('js--personal-data');
+      productRegistration.classList.remove('js--contacts');
     }
   };
 
@@ -198,21 +198,21 @@
   var body = document.querySelector('body');
   var phoneInput = document.querySelector("input[name='phone-number']");
 
-  var deviceRegistration = document.querySelector('.device-registration');
-  var registrationItem = document.querySelectorAll('.device-registration__navigation-item');
+  var productRegistration = document.querySelector('.product-registration');
+  var registrationItem = document.querySelectorAll('.product-registration__navigation-item');
 
-  var deviceData = document.querySelector('.device-data');
-  var deviceDataForm = document.querySelector('.device-data form');
+  var productData = document.querySelector('.product-data');
+  var productDataForm = document.querySelector('.product-data form');
   var warrantyCodeButton = document.querySelector("label[for='serial-number-1'] button");
   var popup = document.querySelector('.popup-warranty');
   var popupClose = document.querySelector('.popup-warranty__close');
   var popupOverlay = document.querySelector('.popup-warranty__overlay');
 
-  var calendarInput = document.querySelector('.device-data__purchase-date');
-  var calendarButton = document.querySelector('.device-data__calendar');
+  var calendarInput = document.querySelector('.product-data__purchase-date');
+  var calendarButton = document.querySelector('.product-data__calendar');
 
-  var serialNumberInput = document.querySelectorAll('.device-data__serial-number');
-  var dataSubmit = document.querySelector('.device-data__submit');
+  var serialNumberInput = document.querySelectorAll('.product-data__serial-number');
+  var dataSubmit = document.querySelector('.product-data__submit');
 
   if(!warrantyCodeButton) {
     return;
@@ -310,8 +310,8 @@
 
   var onSubmit = function (evt) {
     evt.preventDefault();
-    deviceRegistration.classList.add('js--contacts');
-    deviceRegistration.classList.remove('js--device-data');
+    productRegistration.classList.add('js--contacts');
+    productRegistration.classList.remove('js--product-data');
 
     registrationItem[0].classList.add('js--checked');
     registrationItem[1].classList.add('js--active');
@@ -328,12 +328,12 @@
   });
 
   calendarInput.addEventListener('input', onCalendarInput);
-  deviceDataForm.addEventListener('submit', onSubmit);
+  productDataForm.addEventListener('submit', onSubmit);
 }());
 
 (function () {
-  var deviceRegistration = document.querySelector('.device-registration');
-  var registrationItem = document.querySelectorAll('.device-registration__navigation-item');
+  var productRegistration = document.querySelector('.product-registration');
+  var registrationItem = document.querySelectorAll('.product-registration__navigation-item');
 
   var form = document.querySelector('.personal-data__form');
   var surnameInput = document.querySelector(".personal-data input[name='surname']");
@@ -343,7 +343,7 @@
   var emailInput = document.querySelector(".personal-data input[name='email']");
   var checkbox = document.querySelector(".personal-data input[type='checkbox']");
   var checkboxLabel = document.querySelector('.personal-data__agreement-wrapper label');
-  var agreement =document.querySelector(".personal-data__text-wrapper");
+  var agreement = document.querySelector(".personal-data__text-wrapper");
   var submitButton = document.querySelector('.personal-data__button');
 
   if (!surnameInput) {
@@ -419,8 +419,8 @@
   var onFormSubmit = function (evt) {
     evt.preventDefault();
 
-    deviceRegistration.classList.remove('js--personal-data');
-    deviceRegistration.classList.add('js--registration-end');
+    productRegistration.classList.remove('js--personal-data');
+    productRegistration.classList.add('js--registration-end');
 
     registrationItem[1].classList.add('js--checked');
     registrationItem[2].classList.add('js--active');

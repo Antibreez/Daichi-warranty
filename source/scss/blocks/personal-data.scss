@@ -1,5 +1,5 @@
 .personal-data {
-  width: 1170px;
+  max-width: 1170px;
   min-height: 605px;
   margin: 0 auto;
   padding: 50px 120px;
@@ -10,6 +10,10 @@
   &.hidden {
     display: none;
   }
+}
+
+.personal-data__title {
+  display: none;
 }
 
 .personal-data__description {
@@ -52,7 +56,7 @@
 .personal-data__form input[type="email"] {
   width: 292px;
   height: 48px;
-  padding-left: 15px;
+  padding: 0 15px;
 
   border: 1px solid #e7e7e7;
   border-radius: 5px;
@@ -87,6 +91,8 @@
 }
 
 .personal-data__text-wrapper {
+  position: relative;
+
   font-size: 13px;
   line-height: 15px;
 
@@ -96,19 +102,18 @@
 }
 
 .personal-data__agreement-wrapper label {
-  position: relative;
-
   font-weight: 300;
 
   &::before {
     content: "";
 
     position: absolute;
-    top: 5px;
+    top: 50%;
     left: -48px;
 
     width: 20px;
     height: 20px;
+    margin-top: -10px;
 
     border-radius: 2px;
     border: 1px solid #dddddd;
@@ -139,4 +144,126 @@
 .personal-data__button {
   width: 330px;
   margin: 0 auto;
+}
+
+@include desktop-medium {
+  .personal-data {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .personal-data__form {
+    width: 83%;
+    margin: 0 auto;
+  }
+
+  .personal-data__form label:not([for="agreement"]) {
+    width: 31.6%;
+  }
+
+  .personal-data__form label:not([for=agreement]):not(:nth-of-type(3)) {
+    margin-right: 2.6%;
+  }
+
+  .personal-data__form input[type=email], .personal-data__form input[type=text] {
+    width: 100%;
+  }
+
+  .personal-data__description {
+    width: 83%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@include tablet {
+  .personal-data__description {
+    width: 74.1%;
+    margin-bottom: 50px;
+  }
+
+  .personal-data__form {
+    width: 74.1%;
+  }
+
+  .personal-data__form label:not([for="agreement"]) {
+    width: 46.9%;
+  }
+
+  .personal-data__form label:not([for=agreement]):nth-of-type(3n+1) {
+    margin-right: 6.2%;
+  }
+
+  .personal-data__form label:not([for=agreement]):nth-of-type(2),
+  .personal-data__form label:not([for=agreement]):nth-of-type(5) {
+    margin-right: 0;
+  }
+
+  .personal-data__form label:not([for=agreement]):nth-of-type(3) {
+    margin-right: 7%;
+  }
+}
+
+@include mobile-l {
+  .personal-data__title {
+    display: block;
+    width: 87.1%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  .personal-data__description {
+    width: 87.1%;
+    margin-bottom: 54px;
+
+    text-align: center;
+  }
+
+  .personal-data__form {
+    width: 87.1%;
+  }
+
+  .personal-data__form label:not([for=agreement]):nth-of-type(n) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .personal-data__form label:not([for=agreement]):last-of-type {
+    margin-bottom: 22px;
+  }
+}
+
+@include mobile {
+   .personal-data__title {
+     width: 90%;
+
+     font-size: 19px;
+     line-height: 21px;
+   }
+
+   .personal-data__description {
+     width: 90%;
+     margin-bottom: 27px;
+
+     font-size: 13px;
+   }
+
+   .personal-data__form {
+     width: 90%;
+   }
+
+   .personal-data__agreement-wrapper {
+     margin-bottom: 52px;
+   }
+
+   .personal-data__button {
+     width: 100%;
+     padding: 0 20px;
+   }
 }

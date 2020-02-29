@@ -1,5 +1,5 @@
 .registration-end {
-  width: 1170px;
+  max-width: 1170px;
   min-height: 553px;
   margin: 0 auto;
   padding: 50px 120px;
@@ -16,6 +16,11 @@
 }
 
 .registration-end__title {
+  display: none;
+}
+
+.registration-end__message,
+.registration-end__next-step {
   margin: 0;
   margin-bottom: 25px;
 
@@ -48,4 +53,111 @@
 
 .registration-end__account.button {
   color: #ffffff;
+}
+
+@include desktop-medium {
+  .registration-end {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .registration-end__message,
+  .registration-end__next-step {
+    width: 83%;
+    margin: 0 auto 25px;
+  }
+
+  .registration-end__description {
+    width: 83%;
+    margin: 0 auto 50px;
+  }
+}
+
+@include tablet {
+  .registration-end {
+    padding-top: 50px;
+  }
+
+  .registration-end__message,
+  .registration-end__next-step {
+    width: 74.1%;
+  }
+
+  .registration-end__description {
+    width: 74.1%;
+  }
+
+  .registration-end a {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .registration-end .registration-end__recall {
+    margin-bottom: 25px;
+  }
+}
+
+@include mobile-l {
+  .registration-end__title {
+    display: block;
+    width: 87.1%;
+    margin: 0 auto 25px;
+
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 29px;
+  }
+
+  .registration-end__message,
+  .registration-end__next-step {
+    width: 87.1%;
+    margin: 0 auto 25px;
+
+    font-size: 21px;
+    line-height: 23px;
+    text-align: center;
+  }
+
+  .registration-end__description {
+    width: 87.1%;
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    &:last-of-type {
+      margin-bottom: 56px;
+    }
+  }
+}
+
+@include mobile {
+  .registration-end__title {
+    width: 90.6%;
+
+    font-size: 19px;
+    line-height: 21px;
+  }
+
+  .registration-end a {
+    width: 90.6%;
+  }
+
+  .registration-end__message,
+  .registration-end__next-step {
+    width: 90.6%;
+    margin-bottom: 15px;
+
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .registration-end__description {
+    width: 90.6%;
+
+    font-size: 13px;
+
+    &:last-of-type {
+      margin-bottom: 51px;
+    }
+  }
 }

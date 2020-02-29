@@ -1,20 +1,20 @@
-.device-registration.js--device-data .device-data {
+.product-registration.js--product-data .product-data {
     display: block;
 }
 
-.device-registration.js--contacts .contacts {
+.product-registration.js--contacts .contacts {
   display: flex;
 }
 
-.device-registration.js--personal-data .personal-data {
+.product-registration.js--personal-data .personal-data {
   display: block;
 }
 
-.device-registration.js--registration-end .registration-end {
+.product-registration.js--registration-end .registration-end {
   display: block;
 }
 
-.device-registration__container {
+.product-registration__container {
   @include container;
 
   max-width: 1516px;
@@ -61,14 +61,14 @@
   }
 }
 
-.device-registration__navigation {
+.product-registration__navigation {
   display: flex;
   width: 100%;
 
   margin-bottom: 80px;
 }
 
-.device-registration__navigation-item {
+.product-registration__navigation-item {
   position: relative;
 
   width: 450px;
@@ -125,11 +125,11 @@
     background-color: #dddddd;
   }
 
-  &.js--active .device-registration__navigation-number {
+  &.js--active .product-registration__navigation-number {
     background-color: #00adef;
   }
 
-  &.js--active .device-registration__navigation-name {
+  &.js--active .product-registration__navigation-name {
     color: #000000;
   }
 
@@ -137,11 +137,11 @@
     background-color: #00adef;
   }
 
-  &.js--checked .device-registration__navigation-number {
+  &.js--checked .product-registration__navigation-number {
     font-size: 0;
   }
 
-  &.js--checked .device-registration__navigation-number::after {
+  &.js--checked .product-registration__navigation-number::after {
     content: "";
 
     position: absolute;
@@ -156,7 +156,7 @@
   }
 }
 
-.device-registration__navigation-number {
+.product-registration__navigation-number {
   position: relative;
   display: flex;
   align-items: center;
@@ -173,7 +173,7 @@
   border-radius: 50%;
 }
 
-.device-registration__navigation-name {
+.product-registration__navigation-name {
   margin: 0;
 
   font-size: 19px;
@@ -182,18 +182,20 @@
 }
 
 @include desktop-medium {
-  .device-registration__container {
+  .product-registration__container {
     padding-top: 50px;
+    padding-bottom: 68px;
   }
 }
 
 @include tablet {
-  .device-registration__container {
+  .product-registration__container {
     padding-left: 32px;
     padding-right: 32px;
+    padding-bottom: 80px;
   }
 
-  .device-registration__navigation-item {
+  .product-registration__navigation-item {
     &:first-child,
     &:last-child {
       width: 35%;
@@ -216,7 +218,7 @@
     }
   }
 
-  .device-registration__navigation-name {
+  .product-registration__navigation-name {
     margin: 0;
 
     font-size: 17px;
@@ -226,7 +228,7 @@
 }
 
 @include mobile-l {
-  .device-registration__container {
+  .product-registration__container {
     padding-left: 0;
     padding-right: 0;
   }
@@ -236,12 +238,12 @@
     margin-bottom: 50px;
   }
 
-  .device-registration__navigation {
+  .product-registration__navigation {
     width: calc(100% - 64px);
     margin: 0 auto 30px;
   }
 
-  .device-registration__navigation-item {
+  .product-registration__navigation-item {
     &:nth-child(n) {
       width: 33.33%;
       margin-right: 0;
@@ -269,25 +271,25 @@
     }
   }
 
-  .device-registration__navigation-name {
+  .product-registration__navigation-name {
     display: none;
   }
 
-  .device-registration__navigation-number {
+  .product-registration__navigation-number {
     margin: 0;
   }
 }
 
 @include mobile {
-  .device-registration__container {
+  .product-registration__container {
     padding-top: 0;
   }
 
-  .device-registration__navigation {
+  .product-registration__navigation {
     margin-bottom: 25px;
   }
 
-  .device-registration__navigation-item {
+  .product-registration__navigation-item {
     &:nth-child(2)::before {
       top: 12px;
 
@@ -302,7 +304,7 @@
       width: calc(150% - 48px);
     }
 
-    &.js--checked .device-registration__navigation-number::after {
+    &.js--checked .product-registration__navigation-number::after {
       top: 9px;
       left: 7px;
 
@@ -313,7 +315,7 @@
     }
   }
 
-  .device-registration__navigation-number {
+  .product-registration__navigation-number {
     width: 24px;
     height: 24px;
 
@@ -344,7 +346,7 @@
     &:nth-child(2)::before {
       content: "";
 
-      top: 3px;
+      top: 2px;
       left: 0;
 
       width: 10px;

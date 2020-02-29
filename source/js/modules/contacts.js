@@ -1,6 +1,6 @@
 (function () {
-  var deviceRegistration = document.querySelector('.device-registration');
-  var registrationItem = document.querySelectorAll('.device-registration__navigation-item');
+  var productRegistration = document.querySelector('.product-registration');
+  var registrationItem = document.querySelectorAll('.product-registration__navigation-item');
 
   var contacts = document.querySelector('.contacts');
   var contactsPhone = document.querySelector('.contacts__phone-number');
@@ -69,8 +69,8 @@
   };
 
   var onProductChangeClick = function () {
-    deviceRegistration.classList.remove('js--contacts');
-    deviceRegistration.classList.add('js--device-data');
+    productRegistration.classList.remove('js--contacts');
+    productRegistration.classList.add('js--product-data');
 
     registrationItem[0].classList.remove('js--checked');
     registrationItem[1].classList.remove('js--active');
@@ -126,8 +126,8 @@
 
       attempts++;
     } else {
-      deviceRegistration.classList.add('js--personal-data');
-      deviceRegistration.classList.remove('js--contacts');
+      productRegistration.classList.add('js--personal-data');
+      productRegistration.classList.remove('js--contacts');
     }
   };
 

@@ -1,6 +1,6 @@
 (function () {
-  var deviceRegistration = document.querySelector('.device-registration');
-  var registrationItem = document.querySelectorAll('.device-registration__navigation-item');
+  var productRegistration = document.querySelector('.product-registration');
+  var registrationItem = document.querySelectorAll('.product-registration__navigation-item');
 
   var form = document.querySelector('.personal-data__form');
   var surnameInput = document.querySelector(".personal-data input[name='surname']");
@@ -10,7 +10,7 @@
   var emailInput = document.querySelector(".personal-data input[name='email']");
   var checkbox = document.querySelector(".personal-data input[type='checkbox']");
   var checkboxLabel = document.querySelector('.personal-data__agreement-wrapper label');
-  var agreement =document.querySelector(".personal-data__text-wrapper");
+  var agreement = document.querySelector(".personal-data__text-wrapper");
   var submitButton = document.querySelector('.personal-data__button');
 
   if (!surnameInput) {
@@ -86,8 +86,8 @@
   var onFormSubmit = function (evt) {
     evt.preventDefault();
 
-    deviceRegistration.classList.remove('js--personal-data');
-    deviceRegistration.classList.add('js--registration-end');
+    productRegistration.classList.remove('js--personal-data');
+    productRegistration.classList.add('js--registration-end');
 
     registrationItem[1].classList.add('js--checked');
     registrationItem[2].classList.add('js--active');
