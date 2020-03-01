@@ -2,3 +2,46 @@
   font-family: $font;
   font-weight: 400;
 }
+
+.pika-lendar {
+  width: 258px;
+  margin: 15px 10px 10px;
+}
+
+.pika-prev {
+  background-image: url("../img/arrow-left.svg");
+}
+
+.pika-next {
+  transform: rotate(180deg);
+  background-image: url("../img/arrow-left.svg");
+}
+
+.pika-label {
+  font-size: 15px;
+}
+
+abbr[title] {
+  color: #888888;
+  text-decoration: none;
+}
+
+.pika-table th {
+  font-size: 13px;
+}
+
+.pika-button {
+  height: 34px;
+
+  font-size: 13px;
+  text-align: center;
+
+  background-color: transparent;
+  border-radius: 5px;
+
+  &:hover {
+    color: #00adef;
+
+    background-color: rgba(0, 173, 239, 0.1);
+  }
+}

@@ -126,8 +126,16 @@
 
       attempts++;
     } else {
-      productRegistration.classList.add('js--personal-data');
-      productRegistration.classList.remove('js--contacts');
+      if (productRegistration.classList.contains('product-registration--account')) {
+        productRegistration.classList.add('js--registration-end');
+        productRegistration.classList.remove('js--contacts');
+
+        registrationItem[0].classList.add('js--checked');
+         registrationItem[1].classList.add('js--active');
+      } else {
+        productRegistration.classList.add('js--personal-data');
+        productRegistration.classList.remove('js--contacts');
+      }
     }
   };
 

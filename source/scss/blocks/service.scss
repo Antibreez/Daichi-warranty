@@ -1,0 +1,70 @@
+.service-header {
+  min-height: 420px;
+
+  background: transparent linear-gradient(180deg, #E7ECEC 0%, #E3EAEA 100%) 0% 0% no-repeat padding-box;
+}
+
+.service-header__container {
+  @include container;
+
+  padding-top: 106px;
+  padding-bottom: 30px;
+
+  background-image: url("../img/midea-desktop.png");
+  background-repeat: no-repeat;
+  background-position: right 90px top 0;
+
+  @include retina {
+    background-image: url("../img/midea-desktop@2x.png");
+    background-size: 690px 320px;
+  }
+}
+
+.service-header__title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.service-header__greeting {
+  display: block;
+  margin-bottom: 16px;
+
+  font-weight: 300;
+  font-size: 37px;
+  line-height: 39px;
+}
+
+.service-header__description {
+  margin: 0;
+  margin-bottom: 25px;
+  width: 570px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.service-header__link {
+  @include link-reset;
+
+  width: 330px;
+
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.service-header__link span {
+  position: relative;
+
+  width: 7px;
+  height: 7px;
+  margin-left: 16px;
+
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  transform: rotate(-45deg);
+}

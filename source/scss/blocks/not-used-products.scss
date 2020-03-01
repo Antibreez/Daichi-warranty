@@ -3,8 +3,8 @@
 }
 
 .not-used-products__header {
-  padding-top: 55px;
-  padding-bottom: 51px;
+  padding-top: 45px;
+  padding-bottom: 41px;
   text-align: center;
   background-color: #f6f6f6;
   font-size: 0;
@@ -15,7 +15,7 @@
   position: relative;
 
   width: 420px;
-  height: 21px;
+  height: 41px;
   padding: 0;
   margin: 0;
 
@@ -39,6 +39,7 @@
 
   display: block;
   width: 376px;
+  padding: 10px 0;
   text-align: center;
 
   font-weight: 300;
@@ -47,11 +48,11 @@
 
   transition: all 0.2s ease;
 
-  &.hidden {
+  &.js--hidden {
     opacity: 0;
   }
 
-  &.shown {
+  &.js--shown {
     opacity: 1;
   }
 
@@ -60,7 +61,7 @@
 
     position: absolute;
     right: -40px;
-    top: 3px;
+    top: 13px;
 
     width: 15px;
     height: 12px;
@@ -71,7 +72,7 @@
 
 .not-used-products__show {
   &::before {
-    top: 7px;
+    top: 17px;
     transform: rotate(180deg);
   }
 }
@@ -84,8 +85,8 @@
   transition: 0.5s ease-in-out;
   overflow: hidden;
 
-  &.show {
-    max-height: 1000px;
+  &.js--show {
+    max-height: 10000px;
     //overflow: hidden;
     //padding: 0;
     opacity: 1;
@@ -106,10 +107,141 @@
   flex-wrap: wrap;
 }
 
+.not-used-products__list li {
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
 .not-used-products__item {
   min-height: 566px;
 }
 
 .not-used-products__item .product-card__end-of-warranty {
   margin-bottom: 7px;
+}
+
+@include desktop-catalog {
+  .not-used-products__item {
+    width: 286px;
+    min-height: 521px;
+  }
+
+  .not-used-products__list {
+    width: 918px;
+    margin: 0 auto;
+  }
+
+  .not-used-products__list li {
+    &:nth-child(n) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .not-used-products__item .product-card__image-container {
+    width: 230px;
+    height: 172px;
+    margin-bottom: 25px;
+  }
+
+  .not-used-products__list li {
+    &:nth-child(n) {
+      margin-right: calc((100% - 858px) / 2);
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@include tablet {
+  .not-used-products__container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .not-used-products__item {
+    width: 336px;
+  }
+
+  .not-used-products__list {
+    width: 704px;
+  }
+
+  .not-used-products__list li {
+    &:nth-child(n) {
+      margin-right: 32px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@include mobile-l {
+  .not-used-products__item {
+    width: 416px;
+  }
+
+  .not-used-products__list {
+    width: 100%;
+  }
+
+  .not-used-products__list li {
+    &:nth-child(n) {
+      margin: 0 auto 50px;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@include mobile {
+  .not-used-products__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .not-used-products__item {
+    width: 288px;
+  }
+
+  .not-used-products__button {
+    width: 288px;
+  }
+
+  .not-used-products__hide,
+  .not-used-products__show {
+    width: 200px;
+    padding: 0;
+
+    font-size: 15px;
+    line-height: 16px;
+    text-align: left;
+  }
+
+  .not-used-products__hide {
+    &::before {
+      top: 10px;
+      right: -85px;
+    }
+  }
+
+  .not-used-products__show {
+    &::before {
+      top: 14px;
+      right: -85px;
+    }
+  }
 }

@@ -151,3 +151,159 @@
     background-color: #00adef;
   }
 }
+
+@include desktop-catalog {
+  .my-products__item {
+    width: 286px;
+    min-height: 553px;
+  }
+
+  .my-products__list {
+    width: 918px;
+    margin: 0 auto;
+  }
+
+  .my-products__list li {
+    &:nth-child(n) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .my-products__item .product-card__image-container {
+    width: 230px;
+    height: 172px;
+    margin-bottom: 31px;
+  }
+
+  .my-products__item .product-card__end-of-warranty {
+    margin-bottom: 24px;
+  }
+
+  .my-products__item .product-card__delete-link {
+    padding: 0 20px;
+  }
+
+  .my-products__add-link {
+    width: 286px;
+    min-height: 553px;
+    padding: 307px 62px 20px;
+
+    &::before {
+      top: 220px;
+    }
+
+    &::after {
+      top:243px;
+    }
+  }
+}
+
+@include tablet {
+  .my-products__container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .my-products__item {
+    width: 336px;
+  }
+
+  .my-products__list {
+    width: 704px;
+  }
+
+  .my-products__list li {
+    &:nth-child(n) {
+      margin-right: 32px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .my-products__add-link {
+    width: 336px;
+  }
+}
+
+@include mobile-l {
+  .my-products__container {
+    padding-top: 50px;
+  }
+
+  .my-products__title {
+    font-size: 29px;
+    line-height: 32px;
+  }
+
+  .my-products__item {
+    width: 416px;
+  }
+
+  .my-products__list {
+    width: 100%;
+  }
+
+  .my-products__list li {
+    &:nth-child(n) {
+      margin: 0 auto 50px;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .my-products__add-link {
+    width: 416px;
+    min-height: 135px;
+    padding: 48px 27px 48px 129px;
+
+    text-align: left;
+
+    color: #00adef;
+    border-color: #00adef;
+    background-color: rgba(0, 173, 239, 0.1);
+
+    &::before {
+      top: 50%;
+      left: 54px;
+
+      margin-top: -25px;
+      margin-left: 0;
+      background-color: #00adef;
+    }
+
+    &::after {
+      top: 50%;
+      left: 31px;
+
+      margin-top: -2px;
+      margin-left: 0;
+      background-color: #00adef;
+    }
+  }
+}
+
+@include mobile {
+  .my-products__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .my-products__item {
+    width: 288px;
+  }
+
+  .my-products__add-link {
+    width: 288px;
+
+    font-size: 15px;
+    line-height: 17px;
+  }
+}

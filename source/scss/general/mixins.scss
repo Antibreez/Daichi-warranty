@@ -13,6 +13,13 @@
   }
 }
 
+// Меньше 1516
+@mixin desktop-catalog {
+  @media (max-width: $width-desktop-catalog - 1px) {
+    @content;
+  }
+}
+
 // Меньше 1024
 @mixin tablet {
   @media (max-width: $width-desktop - 1px) {
@@ -69,9 +76,9 @@
 // КОНТЕЙНЕР
 @mixin container {
   margin: 0 auto;
-  max-width: 1470px;
-  padding-left: 30px;
-  padding-right: 30px;
+  max-width: 1516px;
+  padding-left: 53px;
+  padding-right: 53px;
 
   @media (max-width: $width-tablet - 1px) {
     padding: 0;

@@ -117,8 +117,10 @@
     productRegistration.classList.add('js--contacts');
     productRegistration.classList.remove('js--product-data');
 
-    registrationItem[0].classList.add('js--checked');
-    registrationItem[1].classList.add('js--active');
+    if (!productRegistration.classList.contains('product-registration--account')) {
+      registrationItem[0].classList.add('js--checked');
+      registrationItem[1].classList.add('js--active');
+    }
 
     phoneInput.focus();
   };

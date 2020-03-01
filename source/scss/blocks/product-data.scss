@@ -202,6 +202,7 @@ label[for="purchase-date"] {
   width: 100vw;
 
   transition: 0.2s ease;
+  overflow: auto;
 
   &.hidden {
     display: block;
@@ -227,7 +228,7 @@ label[for="purchase-date"] {
   left: 50%;
 
   width: 1170px;
-  height: 320px;
+  min-height: 320px;
   margin-left: -585px;
   margin-top: -160px;
   padding: 50px 120px;
@@ -279,8 +280,11 @@ label[for="purchase-date"] {
   border: none;
   background-image: url("../img/close.svg");
 
+  transition: all 0.3s ease;
+
   &:hover {
     cursor: pointer;
+    opacity: 0.6;
   }
 
   &:active {
@@ -332,6 +336,17 @@ label[for="purchase-date"] {
       border-color: #ff0000;
     }
   }
+
+  .popup-warranty__content {
+    width: 918px;
+    margin-left: -459px;
+    padding: 50px 79px;
+  }
+
+  .popup-warranty__description {
+    width: 280px;
+    padding-top: 25px;
+  }
 }
 
 @include tablet {
@@ -340,6 +355,27 @@ label[for="purchase-date"] {
     margin: 0 auto;
   }
 
+  .popup-warranty__content {
+    width: 704px;
+    min-height: 440px;
+    margin-left: -352px;
+    padding: 50px 92px;
+  }
+
+  .popup-warranty__title {
+    line-height: 30px;
+  }
+
+  .popup-warranty__image-box {
+    width: 520px;
+    height: 163px;
+    margin-right: 0;
+  }
+
+  .popup-warranty__description {
+    width: 520px;
+    min-height: auto;
+  }
 }
 
 @include mobile-l {
@@ -414,6 +450,34 @@ label[for="purchase-date"] {
       margin-left: -5px;
     }
   }
+
+  .popup-warranty__content {
+    width: 416px;
+    min-height: 350px;
+    margin-left: -208px;
+    padding: 50px;
+  }
+
+  .popup-warranty__title {
+    margin-bottom: 25px;
+
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .popup-warranty__image-box {
+    width: 316px;
+    height: 99px;
+  }
+
+  .popup-warranty__description {
+    width: 316px;
+
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+  }
 }
 
 @include mobile {
@@ -456,5 +520,27 @@ label[for="purchase-date"] {
       width: 5px;
       margin-left: -2px;
     }
+  }
+
+  .popup-warranty__content {
+    width: 288px;
+    min-height: 308px;
+    margin-left: -144px;
+    padding: 25px;
+  }
+
+  .popup-warranty__title {
+    font-size: 19px;
+    line-height: 21px;
+  }
+
+  .popup-warranty__image-box {
+    width: 238px;
+    height: 75px;
+  }
+
+  .popup-warranty__description {
+    width: 238px;
+    padding-top: 27px;
   }
 }
