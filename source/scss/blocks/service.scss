@@ -1,14 +1,13 @@
 .service-header {
-  min-height: 420px;
-
   background: transparent linear-gradient(180deg, #E7ECEC 0%, #E3EAEA 100%) 0% 0% no-repeat padding-box;
 }
 
 .service-header__container {
   @include container;
 
+  min-height: 420px;
   padding-top: 106px;
-  padding-bottom: 30px;
+  padding-bottom: 105px;
 
   background-image: url("../img/midea-desktop.png");
   background-repeat: no-repeat;
@@ -27,10 +26,13 @@
   font-weight: 300;
   font-size: 15px;
   line-height: 16px;
+
+  opacity: 0.8;
 }
 
 .service-header__greeting {
   display: block;
+  max-width: 50%;
   margin-bottom: 16px;
 
   font-weight: 300;
@@ -67,4 +69,125 @@
   border-bottom: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
   transform: rotate(-45deg);
+}
+
+@include desktop-medium {
+  .service-header__container {
+    min-height: 300px;
+    padding-top: 61px;
+    padding-bottom: 62px;
+
+    background-image: url("../img/midea-desktop-medium.png");
+    background-position: right 53px top 50%;
+
+    @include retina {
+      background-image: url("../img/midea-desktop-medium@2x.png");
+      background-size: 444px 205px;
+    }
+  }
+
+  .service-header__title {
+    margin-bottom: 25px;
+  }
+
+  .service-header__greeting {
+    max-width: 60%;
+  }
+}
+
+@include tablet {
+  .service-header__container {
+    padding-top: 50px;
+
+    background-image: url("../img/midea-tablet.png");
+    background-position: right 0 top 50%;
+
+    @include retina {
+      background-image: url("../img/midea-tablet@2x.png");
+      background-size: 336px 250px;
+    }
+  }
+
+  .service-header__greeting {
+    margin-bottom: 25px;
+
+    line-height: 40px;
+  }
+
+  .service-header__description {
+    width: auto;
+    max-width: 55%;
+    margin-bottom: 45px;
+  }
+
+  .service-header__link {
+    width: 300px;
+    padding: 0 20px;
+  }
+}
+
+@include mobile-l {
+  .service-header__container {
+    min-height: auto;
+    padding: 42px 32px;
+
+    background-image: url("../img/midea-mobile-large.png");
+    background-position: right 5% top 0;
+
+    @include retina {
+      background-image: url("../img/midea-mobile-large@2x.png");
+      background-size: 336px 250px;
+    }
+  }
+
+  .service-header__title {
+    margin-bottom: 15px;
+  }
+
+  .service-header__greeting {
+    margin-bottom: 30px;
+
+    font-size: 27px;
+    line-height: 32px;
+  }
+
+  .service-header__description {
+    display: none;
+  }
+
+  .service-header__link {
+    width: 250px;
+  }
+}
+
+@include mobile {
+  .service-header__container {
+    padding: 15px 16px 40px;
+
+    background-image: url("../img/midea-mobile.png");
+    background-position: right 50% top 125px;
+
+    @include retina {
+      background-image: url("../img/midea-mobile@2x.png");
+      background-size: 288px 101px;
+    }
+  }
+
+  .service-header__title {
+    margin-bottom: 5px;
+
+    text-align: center;
+  }
+
+  .service-header__greeting {
+    max-width: 350px;
+    margin: 0 auto 150px;
+
+    text-align: center;
+  }
+
+  .service-header__link {
+    //width: 280px;
+    margin: 0 auto;
+  }
 }

@@ -10,9 +10,9 @@
   "author": "",
   "license": "",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/Antibreez/Daichi-warranty"
   },
-  "homepage": "",
+  "homepage": "https://github.com/Antibreez/Daichi-warranty#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.1",
     "browser-sync": "^2.26.7",
@@ -46,6 +46,11 @@
     "build": "gulp build",
     "start": "gulp start"
   },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "eslintIgnore": [
     "vendor/"
   ]

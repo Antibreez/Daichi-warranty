@@ -45,7 +45,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -230,7 +231,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -264,7 +266,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -360,7 +363,8 @@ template {
 
 .pika-single.is-bound {
   position: absolute;
-  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 .pika-single {
@@ -494,7 +498,8 @@ template {
 .pika-button {
   cursor: pointer;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
   border: 0;
   margin: 0;
@@ -516,7 +521,8 @@ template {
   color: #fff;
   font-weight: bold;
   background: #33aaff;
-  box-shadow: inset 0 1px 3px #178fe5;
+  -webkit-box-shadow: inset 0 1px 3px #178fe5;
+          box-shadow: inset 0 1px 3px #178fe5;
   border-radius: 3px;
 }
 
@@ -534,7 +540,8 @@ template {
 .pika-button:hover {
   color: #fff;
   background: #ff8000;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-radius: 3px;
 }
 
@@ -555,14 +562,16 @@ template {
 .is-startrange .pika-button {
   color: #fff;
   background: #6CB31D;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-radius: 3px;
 }
 
 .is-endrange .pika-button {
   color: #fff;
   background: #33aaff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-radius: 3px;
 }
 
@@ -585,11 +594,13 @@ template {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -692,17 +703,25 @@ img {
 }
 
 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 48px;
   padding: 0 40px;
   font-size: 15px;
   line-height: 17px;
+  text-align: center;
   color: #ffffff;
   background-color: #00adef;
   border: none;
   border-radius: 24px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -743,6 +762,8 @@ img {
 
 .authorization {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 1170px;
@@ -803,6 +824,7 @@ img {
   color: #888888;
   text-align: right;
   border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -818,6 +840,7 @@ img {
   border-radius: 5px;
   font-size: 19px;
   line-height: 25px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -843,10 +866,19 @@ img {
 }
 
 .authorization__registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 50%;
 }
 
@@ -861,7 +893,10 @@ img {
     padding-top: 0;
   }
   .authorization {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .authorization::before {
     content: "";
@@ -924,6 +959,7 @@ img {
 }
 
 .account-header {
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#E7ECEC), to(#E3EAEA)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #E7ECEC 0%, #E3EAEA 100%) 0% 0% no-repeat padding-box;
 }
 
@@ -977,8 +1013,11 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .account-header__nav-header {
@@ -992,6 +1031,7 @@ img {
   line-height: 21px;
   color: #888888;
   opacity: 0.8;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -1124,6 +1164,7 @@ img {
     width: 100%;
     height: 1000px;
     background-color: #ffffff;
+    -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     z-index: 10;
   }
@@ -1161,16 +1202,21 @@ img {
     background-color: #000000;
   }
   .account-header__nav-button::before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
   .account-header__nav-button::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   .account-header__nav-button:hover {
     cursor: pointer;
   }
   .account-header__nav-list {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .account-header__nav-item {
     position: relative;
@@ -1200,7 +1246,8 @@ img {
     right: 7%;
     width: 10px;
     height: 10px;
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
     background-image: url("../img/arrow-left.svg");
   }
 }
@@ -1309,8 +1356,11 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .my-products__list li {
@@ -1340,6 +1390,7 @@ img {
   text-align: center;
   border: 1px solid #cbcbcb;
   border-radius: 6px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -1538,6 +1589,7 @@ img {
   font-weight: 300;
   font-size: 19px;
   line-height: 21px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -1564,13 +1616,15 @@ img {
 
 .not-used-products__show::before {
   top: 17px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .not-used-products__content {
   max-height: 5px;
   background-color: #f6f6f6;
   opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   overflow: hidden;
 }
@@ -1599,8 +1653,11 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .not-used-products__list li {
@@ -1716,6 +1773,8 @@ img {
 }
 
 .product-registration.js--contacts .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1779,6 +1838,8 @@ img {
 }
 
 .product-registration__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin-bottom: 80px;
@@ -1787,9 +1848,16 @@ img {
 .product-registration__navigation-item {
   position: relative;
   width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-registration__navigation-item:not(:last-child) {
@@ -1832,11 +1900,14 @@ img {
   height: 7px;
   border-bottom: 2px solid #ffffff;
   border-left: 2px solid #ffffff;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .product-registration__navigation--account {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .product-registration__navigation--account .product-registration__navigation-item {
@@ -1864,9 +1935,15 @@ img {
 
 .product-registration__navigation-number {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 44px;
   height: 44px;
   margin-bottom: 30px;
@@ -1926,10 +2003,14 @@ img {
     margin-right: 0;
   }
   .product-registration__navigation-item:first-child {
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .product-registration__navigation-item:last-child {
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .product-registration__navigation-item:nth-child(2)::before {
     width: calc(150% - 84px);
@@ -2121,6 +2202,7 @@ label[for="serial-number-1"] button:active {
   text-transform: uppercase;
   border: 1px solid #dddddd;
   border-radius: 2px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2160,6 +2242,7 @@ label[for="purchase-date"] {
   text-transform: uppercase;
   border: 1px solid #dddddd;
   border-radius: 2px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2194,6 +2277,7 @@ label[for="purchase-date"] {
   left: 0;
   height: 100vh;
   width: 100vw;
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   overflow: auto;
 }
@@ -2263,6 +2347,7 @@ label[for="purchase-date"] {
   background-color: transparent;
   border: none;
   background-image: url("../img/close.svg");
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2375,9 +2460,15 @@ label[for="purchase-date"] {
   }
   .product-data label[for="serial-number-1"] {
     margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .product-data label[for="serial-number-1"] p,
   .product-data label[for="purchase-date"] {
@@ -2487,7 +2578,8 @@ label[for="purchase-date"] {
 }
 
 .pika-next {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   background-image: url("../img/arrow-left.svg");
 }
 
@@ -2518,8 +2610,12 @@ abbr[title] {
 }
 
 .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: 1170px;
   min-height: 642px;
   margin: 0 auto;
@@ -2588,6 +2684,7 @@ abbr[title] {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2685,7 +2782,8 @@ abbr[title] {
     width: 286px;
     min-height: 500px;
     margin-right: 8.6%;
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .contacts__product-card .product-card__image-container {
     width: 230px;
@@ -2709,8 +2807,13 @@ abbr[title] {
 
 @media (max-width: 1023px) {
   .contacts {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contacts__left-wrapper {
     width: 74.1%;
@@ -2849,6 +2952,7 @@ abbr[title] {
   border-radius: 5px;
   font-size: 15px;
   line-height: 16px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -3070,6 +3174,8 @@ abbr[title] {
 .registration-end a {
   text-decoration: none;
   color: inherit;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 330px;
 }
@@ -3110,6 +3216,8 @@ abbr[title] {
     width: 74.1%;
   }
   .registration-end a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
   }
@@ -3171,7 +3279,7 @@ abbr[title] {
 }
 
 .service-header {
-  min-height: 420px;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#E7ECEC), to(#E3EAEA)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #E7ECEC 0%, #E3EAEA 100%) 0% 0% no-repeat padding-box;
 }
 
@@ -3180,8 +3288,9 @@ abbr[title] {
   max-width: 1516px;
   padding-left: 53px;
   padding-right: 53px;
+  min-height: 420px;
   padding-top: 106px;
-  padding-bottom: 30px;
+  padding-bottom: 105px;
   background-image: url("../img/midea-desktop.png");
   background-repeat: no-repeat;
   background-position: right 90px top 0;
@@ -3206,10 +3315,12 @@ abbr[title] {
   font-weight: 300;
   font-size: 15px;
   line-height: 16px;
+  opacity: 0.8;
 }
 
 .service-header__greeting {
   display: block;
+  max-width: 50%;
   margin-bottom: 16px;
   font-weight: 300;
   font-size: 37px;
@@ -3240,5 +3351,126 @@ abbr[title] {
   margin-left: 16px;
   border-bottom: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media (max-width: 1275px) {
+  .service-header__container {
+    min-height: 300px;
+    padding-top: 61px;
+    padding-bottom: 62px;
+    background-image: url("../img/midea-desktop-medium.png");
+    background-position: right 53px top 50%;
+  }
+}
+
+@media (max-width: 1275px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1275px) and (min-resolution: 144dpi), (max-width: 1275px) and (min-resolution: 1.5dppx) {
+  .service-header__container {
+    background-image: url("../img/midea-desktop-medium@2x.png");
+    background-size: 444px 205px;
+  }
+}
+
+@media (max-width: 1275px) {
+  .service-header__title {
+    margin-bottom: 25px;
+  }
+  .service-header__greeting {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .service-header__container {
+    padding-top: 50px;
+    background-image: url("../img/midea-tablet.png");
+    background-position: right 0 top 50%;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .service-header__container {
+    background-image: url("../img/midea-tablet@2x.png");
+    background-size: 336px 250px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .service-header__greeting {
+    margin-bottom: 25px;
+    line-height: 40px;
+  }
+  .service-header__description {
+    width: auto;
+    max-width: 55%;
+    margin-bottom: 45px;
+  }
+  .service-header__link {
+    width: 300px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-header__container {
+    min-height: auto;
+    padding: 42px 32px;
+    background-image: url("../img/midea-mobile-large.png");
+    background-position: right 5% top 0;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .service-header__container {
+    background-image: url("../img/midea-mobile-large@2x.png");
+    background-size: 336px 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-header__title {
+    margin-bottom: 15px;
+  }
+  .service-header__greeting {
+    margin-bottom: 30px;
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .service-header__description {
+    display: none;
+  }
+  .service-header__link {
+    width: 250px;
+  }
+}
+
+@media (max-width: 479px) {
+  .service-header__container {
+    padding: 15px 16px 40px;
+    background-image: url("../img/midea-mobile.png");
+    background-position: right 50% top 125px;
+  }
+}
+
+@media (max-width: 479px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 479px) and (min-resolution: 144dpi), (max-width: 479px) and (min-resolution: 1.5dppx) {
+  .service-header__container {
+    background-image: url("../img/midea-mobile@2x.png");
+    background-size: 288px 101px;
+  }
+}
+
+@media (max-width: 479px) {
+  .service-header__title {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .service-header__greeting {
+    max-width: 350px;
+    margin: 0 auto 150px;
+    text-align: center;
+  }
+  .service-header__link {
+    margin: 0 auto;
+  }
 }

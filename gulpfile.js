@@ -114,7 +114,7 @@ gulp.task(`js`, function () {
     `source/js/modules/account.js`,
     `source/js/modules/contacts.js`,
     `source/js/modules/product-data.js`,
-    `source/js/modules/personal-data.js`,
+    `source/js/modules/personal-data.js`
   ])
     .pipe(plumber())
     .pipe(sourcemap.init())
