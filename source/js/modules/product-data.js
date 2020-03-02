@@ -24,9 +24,9 @@
 
   var checkValidity = function () {
     if(
-      serialNumberInput[0].value.length === 6
-      && serialNumberInput[1].value.length === 6
-      && serialNumberInput[2].value.length === 6
+      serialNumberInput[0].checkValidity()
+      && serialNumberInput[1].checkValidity()
+      && serialNumberInput[2].checkValidity()
       && (/^[0-9.]+$/).test(calendarInput.value)
     ) {
       dataSubmit.removeAttribute('disabled');
@@ -65,7 +65,14 @@
   var onSerialNumberInput = function (evt) {
     var target = evt.target;
 
-    if (target.value.length === 6) {
+    target.setCustomValidity('');
+
+    if(!(/^[A-Za-z0-9]{6}/).test(target.value) && target.value.length === 6) {
+      target.setCustomValidity('Разрешены только латинские буквы и цыфры');
+      target.reportValidity();
+    }
+
+    if ((/^[A-Za-z0-9]{6}/).test(target.value) && target.value.length === 6) {
       if (target.classList.contains('js--wrong-input')) {
         target.classList.remove('js--wrong-input');
       }

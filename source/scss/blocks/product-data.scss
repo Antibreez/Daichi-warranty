@@ -212,7 +212,7 @@ label[for="purchase-date"] {
 }
 
 .popup-warranty__overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 
@@ -224,13 +224,14 @@ label[for="purchase-date"] {
 
 .popup-warranty__content {
   position: absolute;
-  top: 50%;
+  top: 30vh;
   left: 50%;
 
   width: 1170px;
   min-height: 320px;
   margin-left: -585px;
-  margin-top: -160px;
+  //margin-top: -160px;
+  margin-bottom: 50px;
   padding: 50px 120px;
 
   background-color: #ffffff;
@@ -356,6 +357,8 @@ label[for="purchase-date"] {
   }
 
   .popup-warranty__content {
+    top: 20vh;
+
     width: 704px;
     min-height: 440px;
     margin-left: -352px;

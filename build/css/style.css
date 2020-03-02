@@ -642,6 +642,18 @@ img {
   display: none;
 }
 
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
 .product-card {
   width: 330px;
   padding: 30px 24px;
@@ -703,17 +715,9 @@ img {
 }
 
 .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
   height: 48px;
-  padding: 0 40px;
+  padding: 14px 40px 16px;
   font-size: 15px;
   line-height: 17px;
   text-align: center;
@@ -1449,7 +1453,8 @@ img {
     margin-bottom: 24px;
   }
   .my-products__item .product-card__delete-link {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .my-products__add-link {
     width: 286px;
@@ -2289,7 +2294,7 @@ label[for="purchase-date"] {
 }
 
 .popup-warranty__overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -2299,12 +2304,12 @@ label[for="purchase-date"] {
 
 .popup-warranty__content {
   position: absolute;
-  top: 50%;
+  top: 30vh;
   left: 50%;
   width: 1170px;
   min-height: 320px;
   margin-left: -585px;
-  margin-top: -160px;
+  margin-bottom: 50px;
   padding: 50px 120px;
   background-color: #ffffff;
 }
@@ -2409,6 +2414,7 @@ label[for="purchase-date"] {
     margin: 0 auto;
   }
   .popup-warranty__content {
+    top: 20vh;
     width: 704px;
     min-height: 440px;
     margin-left: -352px;
@@ -3174,9 +3180,7 @@ abbr[title] {
 .registration-end a {
   text-decoration: none;
   color: inherit;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: inline-block;
   width: 330px;
 }
 
@@ -3216,9 +3220,7 @@ abbr[title] {
     width: 74.1%;
   }
   .registration-end a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     margin: 0 auto;
   }
   .registration-end .registration-end__recall {
@@ -3346,6 +3348,7 @@ abbr[title] {
 
 .service-header__link span {
   position: relative;
+  display: inline-block;
   width: 7px;
   height: 7px;
   margin-left: 16px;
@@ -3408,7 +3411,8 @@ abbr[title] {
   }
   .service-header__link {
     width: 300px;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

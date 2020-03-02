@@ -43,7 +43,7 @@
 .registration-end a {
   @include link-reset;
 
-  display: inline-flex;
+  display: inline-block;
   width: 330px;
 }
 
@@ -88,7 +88,7 @@
   }
 
   .registration-end a {
-    display: flex;
+    display: block;
     margin: 0 auto;
   }
 

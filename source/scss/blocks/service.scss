@@ -62,6 +62,7 @@
 .service-header__link span {
   position: relative;
 
+  display: inline-block;
   width: 7px;
   height: 7px;
   margin-left: 16px;
@@ -122,7 +123,8 @@
 
   .service-header__link {
     width: 300px;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
