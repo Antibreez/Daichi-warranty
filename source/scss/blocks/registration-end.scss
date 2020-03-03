@@ -1,4 +1,6 @@
 .registration-end {
+  position: relative;
+
   max-width: 1170px;
   min-height: 553px;
   margin: 0 auto;
@@ -9,6 +11,8 @@
   border: 1px solid #dddddd;
   text-align: center;
   font-size: 0;
+
+  z-index: 1000000;
 
   &.hidden {
     display: none;

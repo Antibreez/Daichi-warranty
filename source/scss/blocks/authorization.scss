@@ -61,6 +61,10 @@
   &[for="password"] {
     margin-right: 172px;
   }
+
+  &.js--wrong {
+    color: #ff0000;
+  }
 }
 
 .authorization__forgot-password {
@@ -88,6 +92,7 @@
   width: 100%;
   height: 48px;
   padding: 0 15px;
+  margin-bottom: 6px;
 
   border: 1px solid #e7e7e7;
   border-radius: 5px;
@@ -97,12 +102,23 @@
 
   transition: all 0.3s ease;
 
-  &[name="name"] {
-    margin-bottom: 18px;
+  // &[name="name"] {
+  //   margin-bottom: 18px;
+  // }
+
+  // &[name="password"] {
+  //   margin-bottom: 42px;
+  // }
+
+  &:-moz-focusring {
+    outline: none;
+    border-color: #00adef;
+    box-shadow: none;
   }
 
-  &[name="password"] {
-    margin-bottom: 42px;
+  &:invalid {
+    outline: none;
+    box-shadow: none;
   }
 
   &:hover,
@@ -112,8 +128,38 @@
   }
 
   &.js--wrong-input {
+    color: #ff0000;
+
     border-color: #ff0000;
   }
+
+  &:invalid {
+    outline: none;
+  }
+
+  // &::-moz-focus-outer,
+  // &::-moz-focus-inner {
+  //   border: 0;
+  //   padding: 0;
+  // }
+}
+
+.authorization__name-error,
+.authorization__password-error {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  color: #ff0000;
+}
+
+.authorization__name-error {
+  margin-bottom: 16px;
+}
+
+.authorization__password-error {
+  margin-bottom: 42px;
 }
 
 .authorization__button {
@@ -143,15 +189,7 @@
     flex-direction: column;
 
     &::before {
-      content: "";
-
-      position: absolute;
-      left: 0;
-      top: 428px;
-
-      width: 100%;
-      height: 1px;
-      margin-top: 0;
+      display: none;
     }
   }
 
@@ -179,6 +217,8 @@
 
   .authorization__registration {
     padding: 40px 0 72px;
+
+    border-top: 1px solid #dddddd;
   }
 }
 
@@ -202,7 +242,8 @@
 
   .authorization__registration-link {
     width: 292px;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     font-size: 13px;
   }

@@ -22,12 +22,20 @@
     return;
   }
 
+  var isSerialNumberValid = function (target) {
+    return (/^[A-Za-z0-9]{6}/).test(target.value);
+  };
+
+  var isCalendarValid = function () {
+    return (/^[0-9.]+$/).test(calendarInput.value);
+  };
+
   var checkValidity = function () {
     if(
-      serialNumberInput[0].checkValidity()
-      && serialNumberInput[1].checkValidity()
-      && serialNumberInput[2].checkValidity()
-      && (/^[0-9.]+$/).test(calendarInput.value)
+      isSerialNumberValid(serialNumberInput[0])
+      && isSerialNumberValid(serialNumberInput[1])
+      && isSerialNumberValid(serialNumberInput[2])
+      && isCalendarValid()
     ) {
       dataSubmit.removeAttribute('disabled');
     } else {
@@ -67,12 +75,12 @@
 
     target.setCustomValidity('');
 
-    if(!(/^[A-Za-z0-9]{6}/).test(target.value) && target.value.length === 6) {
+    if(!isSerialNumberValid(target) && target.value.length === 6) {
       target.setCustomValidity('Разрешены только латинские буквы и цыфры');
       target.reportValidity();
     }
 
-    if ((/^[A-Za-z0-9]{6}/).test(target.value) && target.value.length === 6) {
+    if (isSerialNumberValid(target) && target.value.length === 6) {
       if (target.classList.contains('js--wrong-input')) {
         target.classList.remove('js--wrong-input');
       }
@@ -91,10 +99,17 @@
     checkValidity();
   };
 
+  // var onInputBlur = function (evt) {
+  //   var target = evt.target;
+
+  //   if (target.value.length < 6) {
+  //     target.setCustomValidity('Введите 6 символов');
+  //     target.reportValidity();
+  //   }
+  // }
+
   var onCalendarInput = function () {
     checkValidity();
-    console.log(calendarInput.value.length);
-
   };
 
   var openPopup = function () {
@@ -138,6 +153,7 @@
 
   serialNumberInput.forEach(function (el) {
     el.addEventListener('input', onSerialNumberInput);
+    //el.addEventListener('blur', onInputBlur);
   });
 
   calendarInput.addEventListener('input', onCalendarInput);

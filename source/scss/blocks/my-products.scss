@@ -303,8 +303,23 @@
 
   .my-products__add-link {
     width: 288px;
+    min-height: 105px;
+    padding: 36px 36px 35px 105px;
 
     font-size: 15px;
     line-height: 17px;
+
+    &::before {
+      left: 47px;
+
+      height: 44px;
+      margin-top: -22px;
+    }
+
+    &::after {
+      left: 27px;
+
+      width: 44px
+    }
   }
 }

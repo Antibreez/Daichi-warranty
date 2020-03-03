@@ -717,7 +717,7 @@ input::-ms-clear {
 .button {
   display: block;
   height: 48px;
-  padding: 14px 40px 16px;
+  padding: 15px 40px;
   font-size: 15px;
   line-height: 17px;
   text-align: center;
@@ -817,6 +817,10 @@ input::-ms-clear {
   margin-right: 172px;
 }
 
+.authorization__form label.js--wrong {
+  color: #ff0000;
+}
+
 .authorization__forgot-password {
   text-decoration: none;
   color: inherit;
@@ -840,6 +844,7 @@ input::-ms-clear {
   width: 100%;
   height: 48px;
   padding: 0 15px;
+  margin-bottom: 6px;
   border: 1px solid #e7e7e7;
   border-radius: 5px;
   font-size: 19px;
@@ -848,12 +853,16 @@ input::-ms-clear {
   transition: all 0.3s ease;
 }
 
-.authorization__form input[name="name"] {
-  margin-bottom: 18px;
+.authorization__form input:-moz-focusring {
+  outline: none;
+  border-color: #00adef;
+  box-shadow: none;
 }
 
-.authorization__form input[name="password"] {
-  margin-bottom: 42px;
+.authorization__form input:invalid {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .authorization__form input:hover, .authorization__form input:focus {
@@ -862,7 +871,29 @@ input::-ms-clear {
 }
 
 .authorization__form input.js--wrong-input {
+  color: #ff0000;
   border-color: #ff0000;
+}
+
+.authorization__form input:invalid {
+  outline: none;
+}
+
+.authorization__name-error,
+.authorization__password-error {
+  margin: 0;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  color: #ff0000;
+}
+
+.authorization__name-error {
+  margin-bottom: 16px;
+}
+
+.authorization__password-error {
+  margin-bottom: 42px;
 }
 
 .authorization__button {
@@ -903,13 +934,7 @@ input::-ms-clear {
             flex-direction: column;
   }
   .authorization::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 428px;
-    width: 100%;
-    height: 1px;
-    margin-top: 0;
+    display: none;
   }
   .authorization__form-wrapper,
   .authorization__registration {
@@ -930,6 +955,7 @@ input::-ms-clear {
   }
   .authorization__registration {
     padding: 40px 0 72px;
+    border-top: 1px solid #dddddd;
   }
 }
 
@@ -949,7 +975,8 @@ input::-ms-clear {
   }
   .authorization__registration-link {
     width: 292px;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 13px;
   }
 }
@@ -1057,7 +1084,7 @@ input::-ms-clear {
   color: inherit;
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .account-header__container {
     padding-top: 30px;
     padding-bottom: 23px;
@@ -1065,14 +1092,14 @@ input::-ms-clear {
   }
 }
 
-@media (max-width: 1275px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1275px) and (min-resolution: 144dpi), (max-width: 1275px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1291px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1291px) and (min-resolution: 144dpi), (max-width: 1291px) and (min-resolution: 1.5dppx) {
   .account-header__container {
     background-image: url("../img/midea-desktop-medium@2x.png");
     background-size: 444px 205px;
   }
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .account-header__greeting {
     margin-right: 0;
     margin-bottom: 20px;
@@ -1228,11 +1255,13 @@ input::-ms-clear {
     height: 50px;
     background-color: #f6f6f6;
     border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
     opacity: 1;
   }
   .account-header__nav-item--active {
     color: #000000;
+  }
+  .account-header__nav-item:last-child {
+    border-bottom: 1px solid #dddddd;
   }
   .account-header__nav-item a {
     display: block;
@@ -1267,7 +1296,7 @@ input::-ms-clear {
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .account-header__container {
     background-image: url("../img/midea-mobile-large@2x.png");
-    background-size: 336px 250px;
+    background-size: 192px 210px;
   }
 }
 
@@ -1546,8 +1575,19 @@ input::-ms-clear {
   }
   .my-products__add-link {
     width: 288px;
+    min-height: 105px;
+    padding: 36px 36px 35px 105px;
     font-size: 15px;
     line-height: 17px;
+  }
+  .my-products__add-link::before {
+    left: 47px;
+    height: 44px;
+    margin-top: -22px;
+  }
+  .my-products__add-link::after {
+    left: 27px;
+    width: 44px;
   }
 }
 
@@ -1964,9 +2004,10 @@ input::-ms-clear {
   font-size: 19px;
   line-height: 21px;
   color: #888888;
+  text-align: center;
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .product-registration__container {
     padding-top: 50px;
     padding-bottom: 68px;
@@ -2098,11 +2139,13 @@ input::-ms-clear {
   }
   .breadcrumbs__link:nth-child(2)::before {
     content: "";
-    top: 2px;
+    top: 0;
     left: 0;
     width: 10px;
-    height: 10px;
+    height: 15px;
     background-image: url("../img/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: top 50% left 0;
   }
 }
 
@@ -2365,7 +2408,7 @@ label[for="purchase-date"] {
   outline: none;
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .product-data {
     padding: 50px 0;
   }
@@ -2779,7 +2822,7 @@ abbr[title] {
   padding-right: 70px;
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .contacts {
     min-height: 600px;
     padding: 50px 0;
@@ -2843,6 +2886,17 @@ abbr[title] {
   .contacts__left-wrapper {
     width: 87.1%;
   }
+  .contacts__code {
+    text-align: center;
+  }
+  .contacts__code-form {
+    max-width: 416px;
+    margin: 0 auto;
+  }
+  .contacts__phone-form {
+    max-width: 416px;
+    margin: 0 auto;
+  }
   .contacts__title {
     display: block;
     margin: 0;
@@ -2857,7 +2911,14 @@ abbr[title] {
     text-align: center;
   }
   .contacts__description {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+  }
+  .contacts label {
+    display: block;
+    text-align: left;
   }
   .contacts input {
     width: 100%;
@@ -3038,7 +3099,7 @@ abbr[title] {
   margin: 0 auto;
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .personal-data {
     padding-left: 0;
     padding-right: 0;
@@ -3139,6 +3200,7 @@ abbr[title] {
 }
 
 .registration-end {
+  position: relative;
   max-width: 1170px;
   min-height: 553px;
   margin: 0 auto;
@@ -3148,6 +3210,7 @@ abbr[title] {
   border: 1px solid #dddddd;
   text-align: center;
   font-size: 0;
+  z-index: 1000000;
 }
 
 .registration-end.hidden {
@@ -3192,7 +3255,7 @@ abbr[title] {
   color: #ffffff;
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .registration-end {
     padding-left: 0;
     padding-right: 0;
@@ -3358,7 +3421,7 @@ abbr[title] {
           transform: rotate(-45deg);
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .service-header__container {
     min-height: 300px;
     padding-top: 61px;
@@ -3368,19 +3431,23 @@ abbr[title] {
   }
 }
 
-@media (max-width: 1275px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1275px) and (min-resolution: 144dpi), (max-width: 1275px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1291px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1291px) and (min-resolution: 144dpi), (max-width: 1291px) and (min-resolution: 1.5dppx) {
   .service-header__container {
     background-image: url("../img/midea-desktop-medium@2x.png");
     background-size: 444px 205px;
   }
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1291px) {
   .service-header__title {
     margin-bottom: 25px;
   }
   .service-header__greeting {
-    max-width: 60%;
+    max-width: 49%;
+  }
+  .service-header__description {
+    width: auto;
+    max-width: 49%;
   }
 }
 
@@ -3405,8 +3472,6 @@ abbr[title] {
     line-height: 40px;
   }
   .service-header__description {
-    width: auto;
-    max-width: 55%;
     margin-bottom: 45px;
   }
   .service-header__link {
@@ -3418,7 +3483,8 @@ abbr[title] {
 
 @media (max-width: 767px) {
   .service-header__container {
-    min-height: auto;
+    position: relative;
+    min-height: 200px;
     padding: 42px 32px;
     background-image: url("../img/midea-mobile-large.png");
     background-position: right 5% top 0;
@@ -3428,7 +3494,7 @@ abbr[title] {
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .service-header__container {
     background-image: url("../img/midea-mobile-large@2x.png");
-    background-size: 336px 250px;
+    background-size: 192px 210px;
   }
 }
 
@@ -3437,7 +3503,7 @@ abbr[title] {
     margin-bottom: 15px;
   }
   .service-header__greeting {
-    margin-bottom: 30px;
+    margin-bottom: 0;
     font-size: 27px;
     line-height: 32px;
   }
@@ -3445,13 +3511,26 @@ abbr[title] {
     display: none;
   }
   .service-header__link {
-    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .service-header__link:hover {
+    background-color: transparent;
+  }
+  .service-header__link span {
+    display: none;
   }
 }
 
 @media (max-width: 479px) {
   .service-header__container {
-    padding: 15px 16px 40px;
+    padding: 15px 16px;
     background-image: url("../img/midea-mobile.png");
     background-position: right 50% top 125px;
   }
@@ -3473,8 +3552,5 @@ abbr[title] {
     max-width: 350px;
     margin: 0 auto 150px;
     text-align: center;
-  }
-  .service-header__link {
-    margin: 0 auto;
   }
 }

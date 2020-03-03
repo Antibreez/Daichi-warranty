@@ -239,6 +239,20 @@
     width: 87.1%;
   }
 
+  .contacts__code {
+    text-align: center;
+  }
+
+  .contacts__code-form {
+    max-width: 416px;
+    margin: 0 auto;
+  }
+
+  .contacts__phone-form {
+    max-width: 416px;
+    margin: 0 auto;
+  }
+
   .contacts__title {
     display: block;
     margin: 0;
@@ -256,7 +270,17 @@
   }
 
   .contacts__description {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+
     text-align: center;
+  }
+
+  .contacts label {
+    display: block;
+
+    text-align: left;
   }
 
   .contacts input {

@@ -180,6 +180,7 @@
   font-size: 19px;
   line-height: 21px;
   color: #888888;
+  text-align: center;
 }
 
 @include desktop-medium {
@@ -398,13 +399,15 @@
     &:nth-child(2)::before {
       content: "";
 
-      top: 2px;
+      top: 0;
       left: 0;
 
       width: 10px;
-      height: 10px;
+      height: 15px;
 
       background-image: url("../img/arrow-left.svg");
+      background-repeat: no-repeat;
+      background-position: top 50% left 0;
     }
   }
 }

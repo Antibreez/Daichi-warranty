@@ -287,11 +287,14 @@
 
     background-color: #f6f6f6;
     border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
     opacity: 1;
 
     &--active {
       color: #000000;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #dddddd;
     }
   }
 
@@ -330,7 +333,7 @@
 
     @include retina {
       background-image: url("../img/midea-mobile-large@2x.png");
-      background-size: 336px 250px;
+      background-size: 192px 210px;
     }
   }
 
