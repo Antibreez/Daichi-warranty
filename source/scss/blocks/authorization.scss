@@ -86,6 +86,11 @@
   &:hover {
     border-color: #bbbbbb;
   }
+
+  &:focus {
+    border-color: #bbbbbb;
+    outline: none;
+  }
 }
 
 .authorization__form input {

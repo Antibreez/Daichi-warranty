@@ -654,6 +654,18 @@ input::-ms-clear {
   display: none;
 }
 
+input:-moz-focusring {
+  outline: none;
+  border-color: #00adef;
+  box-shadow: none;
+}
+
+input:invalid {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .product-card {
   width: 330px;
   padding: 30px 24px;
@@ -734,6 +746,17 @@ input::-ms-clear {
   background-color: #4687e0;
 }
 
+.button:focus {
+  outline: none;
+  background-color: #4687e0;
+}
+
+.button:active {
+  background-color: #0054a6;
+  color: #888;
+  fill: #888;
+}
+
 .button--white {
   color: #000000;
   background-color: #ffffff;
@@ -744,6 +767,18 @@ input::-ms-clear {
   color: #00adef;
   border-color: #00adef;
   background-color: #ffffff;
+}
+
+.button--white:focus {
+  color: #00adef;
+  border-color: #00adef;
+  background-color: #ffffff;
+}
+
+.button--white:active {
+  color: #0054a6;
+  border-color: #0054a6;
+  fill: #0054a6;
 }
 
 .button:disabled {
@@ -838,6 +873,11 @@ input::-ms-clear {
 
 .authorization__forgot-password:hover {
   border-color: #bbbbbb;
+}
+
+.authorization__forgot-password:focus {
+  border-color: #bbbbbb;
+  outline: none;
 }
 
 .authorization__form input {
@@ -1058,6 +1098,11 @@ input::-ms-clear {
 .account-header__nav-item {
   margin-right: 50px;
   margin-bottom: 9px;
+}
+
+.account-header__nav-item a {
+  text-decoration: none;
+  color: inherit;
   font-size: 19px;
   line-height: 21px;
   color: #888888;
@@ -1066,22 +1111,26 @@ input::-ms-clear {
   transition: all 0.2s ease;
 }
 
-.account-header__nav-item:last-child {
+.account-header__nav-item a:last-child {
   margin-right: 0;
 }
 
-.account-header__nav-item--active {
+.account-header__nav-item a:hover {
+  color: #00adef;
+}
+
+.account-header__nav-item a:focus {
+  outline: none;
+  color: #00adef;
+}
+
+.account-header__nav-item a:active {
+  color: #0054a6;
+}
+
+.account-header__nav-item--active a {
   color: #00adef;
   opacity: 1;
-}
-
-.account-header__nav-item:hover {
-  color: #00adef;
-}
-
-.account-header__nav-item a {
-  text-decoration: none;
-  color: inherit;
 }
 
 @media (max-width: 1291px) {
@@ -1448,10 +1497,11 @@ input::-ms-clear {
   margin-left: -25px;
 }
 
-.my-products__add-link:hover {
+.my-products__add-link:hover, .my-products__add-link:focus {
   color: #00adef;
   border-color: #00adef;
   background-color: rgba(0, 173, 239, 0.1);
+  outline: none;
 }
 
 .my-products__add-link:hover::before, .my-products__add-link:hover::after {
@@ -1878,8 +1928,9 @@ input::-ms-clear {
   right: -18px;
 }
 
-.breadcrumbs__link:hover {
+.breadcrumbs__link:hover, .breadcrumbs__link:focus {
   color: #00adef;
+  outline: none;
 }
 
 .product-registration__navigation {
@@ -2737,9 +2788,10 @@ abbr[title] {
   transition: all 0.3s ease;
 }
 
-.contacts__selected-phone-change:hover {
+.contacts__selected-phone-change:hover, .contacts__selected-phone-change:focus {
   cursor: pointer;
   border-bottom: 1px solid #00adef;
+  outline: none;
 }
 
 .contacts label {
@@ -3077,10 +3129,15 @@ abbr[title] {
 
 .personal-data__agreement-wrapper label:hover::before {
   cursor: pointer;
+  border-color: #00adef;
 }
 
 .personal-data__agreement-wrapper label.js--wrong-input::before {
   border-color: #ff0000;
+}
+
+.personal-data input[name="agreement"]:focus + div label::before {
+  border-color: #00adef;
 }
 
 .personal-data__agreement-wrapper a {

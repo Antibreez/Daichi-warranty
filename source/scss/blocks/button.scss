@@ -22,6 +22,17 @@
     background-color: #4687e0;
   }
 
+  &:focus {
+    outline: none;
+    background-color: #4687e0;
+  }
+
+  &:active {
+    background-color: #0054a6;
+    color: #888;
+    fill: #888;
+  }
+
   &--white {
     color: #000000;
 
@@ -33,6 +44,18 @@
     color: #00adef;
     border-color: #00adef;
     background-color: #ffffff;
+  }
+
+  &--white:focus {
+    color: #00adef;
+    border-color: #00adef;
+    background-color: #ffffff;
+  }
+
+  &--white:active {
+    color: #0054a6;
+    border-color: #0054a6;
+    fill: #0054a6;
   }
 
   &:disabled {

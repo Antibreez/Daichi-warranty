@@ -140,10 +140,12 @@
     margin-left: -25px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #00adef;
     border-color: #00adef;
     background-color: rgba(0, 173, 239, 0.1);
+    outline: none;
   }
 
   &:hover::before,

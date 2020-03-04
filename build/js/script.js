@@ -17,6 +17,9 @@
     notFound: 'Пользователь с такой электронной почтой не зарегистрирован в системе.'
   };
 
+  var isNameInputBecameEmpty = false;
+  var isPasswordInputBecameEmpty = false;
+
   var isNameExist = function () {
     return nameInput.value === 'ivanov';
   };
@@ -27,39 +30,57 @@
         submitButton.removeAttribute('disabled');
       }
     }
+
+    if (nameInput.value.length === 0 || passwordInput.value.length === 0) {
+      if (!submitButton.hasAttribute('disabled')) {
+        submitButton.setAttribute('disabled', '');
+      }
+    }
+  }
+
+  var onEmptyName = function () {
+    isNameInputBecameEmpty = true;
+
+    if (!nameInput.classList.contains('js--wrong-input')) {
+      nameInput.classList.add('js--wrong-input');
+    }
+
+    if (!nameLabel.classList.contains('js--wrong')) {
+      nameLabel.classList.add('js--wrong');
+    }
+
+    nameMessage.textContent = ERROR_MESSAGE.empty;
+  }
+
+  var onEmptyPassword = function () {
+    isPasswordInputBecameEmpty = true;
+
+    if (!passwordInput.classList.contains('js--wrong-input')) {
+      passwordInput.classList.add('js--wrong-input');
+    }
+
+    if (!passwordLabel.classList.contains('js--wrong')) {
+      passwordLabel.classList.add('js--wrong');
+    }
+
+    passwordMessage.textContent = ERROR_MESSAGE.empty;
   }
 
   var onSubmit = function (evt) {
     evt.preventDefault();
 
-    if (nameInput.value === '' || passwordInput.value === '') {
-      if (!submitButton.hasAttribute('disabled')) {
-        submitButton.setAttribute('disabled', '');
-      }
+    if (nameInput.value === '' && passwordInput.value === '') {
+      onEmptyName();
+      onEmptyPassword();
+      checkValues();
+      return;
     }
 
-    if (nameInput.value === '') {
-      nameInput.classList.add('js--wrong-input');
-      nameLabel.classList.add('js--wrong');
-      nameMessage.textContent = ERROR_MESSAGE.empty;
-    } else if (!isNameExist()) {
+    if (!isNameExist()) {
       nameInput.classList.add('js--wrong-input');
       nameLabel.classList.add('js--wrong');
       nameMessage.textContent = ERROR_MESSAGE.notFound;
-    }
-
-    if (passwordInput.value === '') {
-      passwordInput.classList.add('js--wrong-input');
-      passwordLabel.classList.add('js--wrong');
-      passwordMessage.textContent = ERROR_MESSAGE.empty;
-    }
-
-    if (
-      nameInput.value.length > 0
-      && isNameExist()
-      && passwordInput.value.length > 0
-    ) {
-
+    } else {
       form.submit();
     }
   }
@@ -67,29 +88,45 @@
   var onNameInput = function () {
     checkValues();
 
-    if (nameInput.classList.contains('js--wrong-input')) {
-      nameInput.classList.remove('js--wrong-input');
+    if (nameInput.value === '') {
+      onEmptyName();
     }
 
-    if (nameLabel.classList.contains('js--wrong')) {
-      nameLabel.classList.remove('js--wrong');
-    }
+    if (nameInput.value.length > 0 && isNameInputBecameEmpty) {
+      isNameInputBecameEmpty = false;
 
-    nameMessage.textContent = '';
+      if (nameInput.classList.contains('js--wrong-input')) {
+        nameInput.classList.remove('js--wrong-input');
+      }
+
+      if (nameLabel.classList.contains('js--wrong')) {
+        nameLabel.classList.remove('js--wrong');
+      }
+
+      nameMessage.textContent = '';
+    }
   };
 
   var onPasswordInput = function () {
     checkValues();
 
-    if (passwordInput.classList.contains('js--wrong-input')) {
-      passwordInput.classList.remove('js--wrong-input');
+    if (passwordInput.value === '') {
+      onEmptyPassword();
     }
 
-    if (passwordLabel.classList.contains('js--wrong')) {
-      passwordLabel.classList.remove('js--wrong');
-    }
+    if (passwordInput.value.length > 0 && isPasswordInputBecameEmpty) {
+      isPasswordInputBecameEmpty = false;
 
-    passwordMessage.textContent = '';
+      if (passwordInput.classList.contains('js--wrong-input')) {
+        passwordInput.classList.remove('js--wrong-input');
+      }
+
+      if (passwordLabel.classList.contains('js--wrong')) {
+        passwordLabel.classList.remove('js--wrong');
+      }
+
+      passwordMessage.textContent = '';
+    }
   };
 
   submitButton.addEventListener('click', onSubmit);

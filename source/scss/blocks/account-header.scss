@@ -58,6 +58,10 @@
 .account-header__nav-item {
   margin-right: 50px;
   margin-bottom: 9px;
+}
+
+.account-header__nav-item a {
+  @include link-reset;
 
   font-size: 19px;
   line-height: 21px;
@@ -71,18 +75,23 @@
     margin-right: 0;
   }
 
-  &--active {
-    color: #00adef;
-    opacity: 1;
-  }
-
   &:hover {
     color: #00adef;
   }
+
+  &:focus {
+    outline: none;
+    color: #00adef;
+  }
+
+  &:active {
+    color: #0054a6;
+  }
 }
 
-.account-header__nav-item a {
-  @include link-reset;
+.account-header__nav-item--active a {
+  color: #00adef;
+  opacity: 1;
 }
 
 @include desktop-medium {

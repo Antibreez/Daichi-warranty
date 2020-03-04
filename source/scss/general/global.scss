@@ -59,3 +59,14 @@ select {
 input::-ms-clear {
   display: none;
 }
+
+input:-moz-focusring {
+  outline: none;
+  border-color: #00adef;
+  box-shadow: none;
+}
+
+input:invalid {
+  outline: none;
+  box-shadow: none;
+}

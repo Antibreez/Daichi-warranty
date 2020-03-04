@@ -122,11 +122,16 @@
 
   &:hover::before {
     cursor: pointer;
+    border-color: #00adef;
   }
 
   &.js--wrong-input::before {
     border-color: #ff0000;
   }
+}
+
+.personal-data input[name="agreement"]:focus + div label::before {
+  border-color: #00adef;
 }
 
 .personal-data__agreement-wrapper a {

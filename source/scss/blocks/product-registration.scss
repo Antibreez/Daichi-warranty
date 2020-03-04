@@ -56,8 +56,10 @@
     right: -18px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #00adef;
+    outline: none;
   }
 }
 
