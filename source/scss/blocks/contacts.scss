@@ -153,6 +153,18 @@
   }
 }
 
+.contacts__code {
+  &.hidden {
+    display: none;
+  }
+}
+
+.contacts__phone-number {
+  &.hidden {
+    display: none;
+  }
+}
+
 .contacts__code-error-message {
   max-width: 330px;
   margin: 0;

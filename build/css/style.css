@@ -638,10 +638,6 @@ img {
   overflow: hidden;
 }
 
-.hidden {
-  display: none;
-}
-
 input:not([type=checkbox]):not([type=radio]),
 textarea,
 select {
@@ -2854,6 +2850,14 @@ abbr[title] {
 .contacts input[name='phone-code'].js--wrong-input {
   border-color: #ff0000;
   color: #ff0000;
+}
+
+.contacts__code.hidden {
+  display: none;
+}
+
+.contacts__phone-number.hidden {
+  display: none;
 }
 
 .contacts__code-error-message {
