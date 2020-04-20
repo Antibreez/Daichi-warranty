@@ -16,11 +16,11 @@ body {
   max-width: $width-desktop-max;
   margin: 0 auto;
 
-  font-family: $font;
-  font-weight: 400;
+  //font-family: $font;
+  //font-weight: 400;
   font-style: normal;
-  font-size: 14px;
-  line-height: 16px;
+  //font-size: 14px;
+  //line-height: 16px;
 
   &.popup {
     max-height: 100vh;
@@ -69,4 +69,12 @@ input:-moz-focusring {
 input:invalid {
   outline: none;
   box-shadow: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  border-bottom: 0;
 }
