@@ -21,7 +21,7 @@
   }
 }
 
-.account-header__greeting {
+b.account-header__greeting {
   display: block;
   margin-bottom: 16px;
 
@@ -70,6 +70,7 @@
   opacity: 0.8;
 
   transition: all 0.2s ease;
+  border-bottom: none;
 
   &:last-child {
     margin-right: 0;
@@ -107,7 +108,7 @@
     }
   }
 
-  .account-header__greeting {
+  b.account-header__greeting {
     margin-right: 0;
     margin-bottom: 20px;
     width: 48.4%;
@@ -144,7 +145,7 @@
     }
   }
 
-  .account-header__greeting {
+  b.account-header__greeting {
     min-height: 80px;
     padding-left: 32px;
     width: 48%;
@@ -346,7 +347,7 @@
     }
   }
 
-  .account-header__greeting {
+  b.account-header__greeting {
     width: 60%;
     min-height: 64px;
     margin-bottom: 73px;
@@ -373,7 +374,7 @@
     }
   }
 
-  .account-header__greeting {
+  b.account-header__greeting {
     width: 100%;
     padding: 0 16px;
     min-height: 64px;

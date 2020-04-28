@@ -1,0 +1,97 @@
+.ui-widget {
+  font-family: gotham_pro,Arial,Helvetica,Helvetica CY,Nimbus Sans L,sans-serif;
+}
+
+div.ui-datepicker .ui-datepicker-title {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333333;
+}
+
+div.ui-datepicker .ui-datepicker-header {
+  background-color: transparent;
+  border: none;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+  background-color: transparent;
+  border: none;
+}
+
+.ui-datepicker .ui-datepicker-next span, .ui-datepicker .ui-datepicker-prev span {
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #333333;
+  border-left: 2px solid #333333;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+
+.ui-datepicker .ui-datepicker-next span {
+  border-left-color: transparent;
+  transform: rotate(-135deg);
+  margin-top: -6px !important;
+}
+
+div.ui-datepicker .ui-datepicker-prev span {
+  border-right-color: transparent;
+  transform: rotate(45deg);
+  margin-left: -4px !important;
+  margin-top: -6px !important;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
+  top: 2px;
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 2px;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 2px;
+}
+
+.ui-datepicker .ui-datepicker-next-hover span, .ui-datepicker .ui-datepicker-prev-hover span {
+  opacity: 1;
+}
+
+.ui-widget.ui-widget-content {
+  border: none;
+}
+
+.ui-datepicker .ui-datepicker-calendar th {
+  border: none;
+}
+
+.ui-datepicker th {
+  font-weight: 400;
+}
+
+.ui-datepicker .ui-datepicker-calendar td .ui-state-default {
+  border: none;
+  background-color: transparent;
+}
+
+.ui-datepicker .ui-datepicker-calendar td a:hover {
+  color: #00adef;
+  background-color: rgba(0, 173, 239, 0.1);
+}
+
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-week-end a {
+  color: #666666;
+}
+
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-week-end a:hover {
+  color: #00adef;
+  background-color: rgba(0, 173, 239, 0.1);
+}
+
+.ui-widget-content {
+  color: #888888;
+}
+
+.ui-datepicker .ui-datepicker-calendar td a {
+  color: #666666;
+  font-weight: 400;
+}
