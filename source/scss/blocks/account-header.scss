@@ -168,18 +168,34 @@ b.account-header__greeting {
 
     display: block;
     width: 100%;
+    height: auto;
     padding-left: 32px;
     padding-top: 15px;
     padding-bottom: 14px;
 
     text-align: left;
+    color: #000000;
 
     background-color: #ffffff;
     border: none;
     border-bottom: 1px solid #dddddd;
+    border-radius: 0;
 
     &:hover {
       cursor: pointer;
+      color: #000000;
+      background-color: #ffffff;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    &:active {
+      color: #000000;
+      background-color: #effeff;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &::before {
