@@ -7,7 +7,7 @@
   var navigation = document.querySelector('.account-header__nav');
   var closeNavButton = document.querySelector('.account-header__nav-button');
 
-  if (!oldProductsButton) {
+  if (!dropdown) {
     return;
   }
 
