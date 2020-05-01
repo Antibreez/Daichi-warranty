@@ -1228,6 +1228,9 @@ b.account-header__greeting {
   }
   .account-header__dropdown:focus {
     outline: none;
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom: 1px solid #cccccc;
   }
   .account-header__dropdown::before {
     content: "";

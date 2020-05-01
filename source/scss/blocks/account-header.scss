@@ -196,6 +196,9 @@ b.account-header__greeting {
 
     &:focus {
       outline: none;
+      background-color: #ffffff;
+      color: #000000;
+      border-bottom: 1px solid #cccccc;
     }
 
     &::before {
